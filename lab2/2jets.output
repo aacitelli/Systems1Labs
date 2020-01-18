@@ -1,0 +1,27 @@
+   ET        Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    0s     TwoTwoFive (1000000, 1000000) ( 50,   7) 35400ft FL355 1396K H225
+   60s     TwoTwoFive ( 900037,  900037) ( 47,   9) 35400ft FL355 1396K H225
+  120s     TwoTwoFive ( 800074,  800074) ( 44,  10) 35400ft FL355 1396K H225
+  180s     TwoTwoFive ( 700111,  700111) ( 41,  12) 35400ft FL355 1396K H225
+  240s     TwoTwoFive ( 600148,  600148) ( 39,  13) 35400ft FL355 1396K H225
+  300s     TwoTwoFive ( 500185,  500185) ( 36,  14) 35400ft FL355 1396K H225
+  360s     TwoTwoFive ( 400222,  400222) ( 33,  16) 35400ft FL355 1396K H225
+  420s     TwoTwoFive ( 300259,  300259) ( 30,  17) 35400ft FL355 1396K H225
+  480s     TwoTwoFive ( 200296,  200296) ( 27,  19) 35400ft FL355 1396K H225
+  540s     TwoTwoFive ( 100333,  100333) ( 24,  20) 35400ft FL355 1396K H225
+  600s     TwoTwoFive (    370,     370) ( 22,  21) 35400ft FL355 1396K H225
+
+   ET        Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    0s   TwoSevenZero (1000540, 1000000) ( 50,   7) 35900ft FL360  988K H270
+   60s   TwoSevenZero ( 900488, 1000000) ( 47,   7) 35900ft FL360  988K H270
+  120s   TwoSevenZero ( 800436, 1000000) ( 44,   7) 35900ft FL360  988K H270
+  180s   TwoSevenZero ( 700384, 1000000) ( 41,   7) 35900ft FL360  988K H270
+  240s   TwoSevenZero ( 600332, 1000000) ( 39,   7) 35900ft FL360  988K H270
+  300s   TwoSevenZero ( 500280, 1000000) ( 36,   7) 35900ft FL360  988K H270
+  360s   TwoSevenZero ( 400228, 1000000) ( 33,   7) 35900ft FL360  988K H270
+  420s   TwoSevenZero ( 300176, 1000000) ( 30,   7) 35900ft FL360  988K H270
+  480s   TwoSevenZero ( 200124, 1000000) ( 27,   7) 35900ft FL360  988K H270
+  540s   TwoSevenZero ( 100072, 1000000) ( 24,   7) 35900ft FL360  988K H270
+  600s   TwoSevenZero (     20, 1000000) ( 22,   7) 35900ft FL360  988K H270
+
+Failed to read: scanf returnd -1

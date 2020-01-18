@@ -1,0 +1,62 @@
+THIS IS THE README FILE FOR LAB 1.
+
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE PERFORMED ALL
+OF THE WORK TO DETERMINE THE ANSWERS FOUND WITHIN THIS FILE MYSELF WITH
+NO ASSISTANCE FROM ANY PERSON OTHER THAN THE INSTRUCTOR OF THIS COURSE
+OR ONE OF OUR UNDERGRADUATE GRADERS.
+
+1. Name: 
+Anden Acitelli 
+
+2. UNIX is proprietary system (i.e. you must purchase a license) while Linux is an Open Source system. An Open Source system, however, is not always “free”. Why?
+Linux distributions themselves are always free, but many companies pay a support fee so they have someone to go to to help them with issues with the distro. 
+
+3. Within gdb, the value of the variable max prints as:
+1
+
+4. Within gdb, the value of the variable i prints as:
+0
+
+5. Within gdb, the value of the variable string1 prints as:
+"The quick fox jumped over the brown dog."
+
+6. When a line of code is printed out after the next command in gdb, that line of code has just finished executing. True or False?
+False. The line that is output is the line that will be run should you execute "next". 
+
+7. What does the output look like from the lab1 executable before any changes are made to it within gdb?
+Hello, World!
+The sample sentence is "The quick fox jumped over the brown dog.". 
+
+8. What does the output look like from the lab1 executable on the second run through the program within gdb?
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+The sample sentence is "The cow jumped over the moon.". 
+
+9. What does the output look like from the lab1 executable on the third run through the program within gdb?
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+The sample sentence is "The quick cat jumped over the brown dog." 
+
+10. How do you think the differences in the output happened?
+These differences occurred due to us changing variable values mid-program-execution. First, we allowed the program to initialize the values of max and string1 to their default values. Then, we overwrote those values using the 'set variable *' syntax so that, once we went through the loop, it would use the variable values we supplied to it rather than the values initialized to the variables by the program. 
+
+11. What do you think the difference is between using the double quote (") and the single quote (') in the assignment statements within gdb?
+The single quote represents a character rather than a full string as with the double quotes. In the first case, when we do 'set string1 = "<stuff>"', this replaces the entire variable (which is a char[], which is essentially C's representation of a String) with that new String. In the second case, when we do 'set string1[index] = '<a single character>', we are setting a single character from that String/character array to that new character. 
+
+12. Have you ever used the gdb debugger before? If so, for what class(es)?
+No; I have never used the gdb debugger previously. 
+
+13. When you run make twice in succession, it behaves differently the second time – how is it different?
+The first time, it runs fine, and creates the lab1 executable that we can then run. The second time, it says "lab1 is up to date", which is a completely different error message. I explain why this happens in #14. 
+
+14. See above – why does make behave differently the second time?
+The first time you run it, make detects that you've made changes to your .c file or its requirements since the last time the project was made (by comparing touch dates), so it rebuilds. The second time you run it, make compares the touch dates and sees that you haven't changed the .c file since the last time you ran it, so it doesn't rebuild because it won't result in any change to the final, built file. 

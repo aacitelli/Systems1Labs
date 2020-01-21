@@ -16,8 +16,7 @@ int main() {
     
     int initValue = al_initialize();
     if (initValue != 0) {
-        displayInput();
-        /* runSimulation(); */
+        execSimulation();
     } else {
         printf("Initialization Error! Error Code %d\n", initValue);
     }
@@ -25,70 +24,35 @@ int main() {
 
 void displayInput() {
 
-    /* char arrays need initial size, so unsigned char size should be more than enough */
-    char planeName[256]; 
-    int xPos, yPos; 
-    short xPosMiles, yPosMiles;
-    int altitude; 
-    short flightLevel; 
-    short airspeed; 
-    short heading; 
+    char planeName[15]; 
+    int xPos, yPos, altitude; 
+    short xPosMiles, yPosMiles, flightLevel, airspeed, heading;
 
-    short counter = 1; 
-
-    /* TODO: Check that the short format specifier is correct */
-    int input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
-    al_clear();
-    al_clock(1000);
+    int input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading);
     while (input != EOF) {
 
-        fprintf(stderr, "Adding Plane %hd to canvas!\n", counter++); 
-
-        /* TODO: Fix this to round to the nearest 500 or w/e, instead 
-            of straight-up dividing by 500 and truncating */
         flightLevel = getFlightLevelFromFeet(altitude);
         xPosMiles = xPos * (1.0 / FEET_PER_MILE);
         yPosMiles = yPos * (1.0 / FEET_PER_MILE);
-
-        /* Debug */
-        fprintf(stderr, "Read-in Values: \n"); 
-        fprintf(stderr, "Plane Name: %s\n", planeName); 
-        fprintf(stderr, "X Position (Feet): %d\n", xPos); 
-        fprintf(stderr, "X Position (miles): %hd\n", xPosMiles);
-        fprintf(stderr, "Y Position (Feet): %d\n", yPos); 
-        fprintf(stderr, "Y Position (miles): %hd\n", yPosMiles);
-        fprintf(stderr, "Altitude (FL): %d\n", flightLevel);
-        fprintf(stderr, "Airspeed (knots): %hd\n", airspeed); 
-        fprintf(stderr, "Heading (degrees): %hd\n", heading);
 
         drawPlane(planeName, xPosMiles, yPosMiles, flightLevel, airspeed, heading); 
         input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
     }
 
-    fprintf(stderr, "Read in both planes' data! Exiting while loop.\n");
-
-    fprintf(stderr, "Refreshing atc grid.\n");
     al_refresh();
-
-    fprintf(stderr, "Waiting for char input to proceed.\n");
-    getchar();
-
-    sleep(5);
-
-    fprintf(stderr, "Tearing down atc grid.\n");
+    /* To make this hang, use getchar() (though I can't get that to work) or a sleep(seconds) statement here */
     al_teardown();
 }
 
-/* Runs the simulation itself, calling the necessary libatc functions */
-void runSimulation() {
-    short time = 0;  
-    short frameNumber = 1;   
+/* Runs the simulation itself, loading in data then displaying it. Assumes libatc is working, which is checked in main (which calls this). */
+void execSimulation() {
+    short time = 0;
+    short frameNumber = 1; 
     while (time < 10) {
         execFrame(time); 
-        sleep(1);
+        sleep(1); 
         time++;
     }
-    al_teardown();
 }
 
 /* Updates the frame with exactly 1 second's worth of action */
@@ -101,21 +65,18 @@ void execFrame(short time) {
 
 /* Calculates the new x pos based on old position, the current 
     angle, and how much time has passed */
-/* TODO: Test this, because it's really easy to get wrong */
 int calcNewX(int oldX, short currAngle, short planeSpeedKnots, float dt) {
-    return oldX + (planeSpeedKnots * FEET_PER_KNOT) * dt * cos(currAngle);
+    return oldX + (planeSpeedKnots * FEET_PER_KNOT) * cos(currAngle) * dt;
 }
 
 /* Calculates the new y pos based on old position, the current 
     angle, and how much time has passed */
-/* TODO: Test this, because it's really easy to get wrong */
 int calcNewY(int oldY, short currAngle, short planeSpeedKnots, float dt) {
-    return oldY + (planeSpeedKnots * FEET_PER_KNOT) * dt * sin(currAngle);
+    return oldY + (planeSpeedKnots * FEET_PER_KNOT) * sin(currAngle) * dt;
 }
 
 /* Returns the flight level given a feet amount */
 int getFlightLevelFromFeet(int feet) {
-    /* If it needs rounded down, round it down, otherwise round up */
     if (feet % 500 < 250) {
         return (feet - (feet % 500)) / 500; 
     } else {
@@ -123,36 +84,28 @@ int getFlightLevelFromFeet(int feet) {
     }
 }
 
-/* TODO: Figure out if this should return an int or some smaller 
-    data type for performance reasons */
-/* Based on fed-in X,Y coordinates, reports whether those coordinates
-    are inside Colorado */
-int isOverColorado(int currX, int currY) {
-    if ((currX >= 0 && currX <= (COLORADO_WIDTH_MILES * FEET_PER_MILE)) 
-        && currY >= 0 && currY <= (COLORADO_HEIGHT_MILES * FEET_PER_MILE)) {
-        return 1;
-    }
-    return 0;
+/* Reports whether fed-in x,y coordinates (in feet) are in colorado */
+int isOverColorado(int x, int y) {
+    return (x >= 0 && x <= (COLORADO_WIDTH_MILES * FEET_PER_MILE)) && (y >= 0 && y <= (COLORADO_HEIGHT_MILES * FEET_PER_MILE));  
 }
 
-/* Calculates which grid box it should be in, proportional to original miles amount */
-short xMilesToGrid(int xPosMiles) {
-    int overallGridWidth = al_max_X() - al_min_X(); 
-    return (xPosMiles * overallGridWidth) / COLORADO_WIDTH_MILES;
+/* Converts passed-in feet amount to *horizontal* grid units */
+short xToGrid(int x) {
+    return ((float) x / FEET_PER_MILE) * (al_max_X() - al_min_X()) / COLORADO_WIDTH_MILES;
 }
 
-short yMilesToGrid(int yPosMiles) {
-    int overallGridHeight = al_max_Y() - al_min_Y();
-    return (yPosMiles * overallGridHeight) / COLORADO_HEIGHT_MILES;
+/* Converts passed-in feet amount to *vertical* grid units */
+short yToGrid(int y) {
+    return ((float) y / FEET_PER_MILE) * (al_max_Y() - al_min_Y()) / COLORADO_HEIGHT_MILES;
 }
 
 /* Draws a plane with the given parameters */
-void drawPlane(char planeName[], int xPosMiles, int yPosMiles, 
+void drawPlane(char planeName[], int x, int y, 
     short flightLevel, short airspeed, short heading) {   
 
-    /* Conversion Miles -> Grid Units */ 
-    int xGrid = xMilesToGrid(xPosMiles); 
-    int yGrid = yMilesToGrid(yPosMiles); 
+    /* By personal convention, all passed values are in feet */
+    int xGrid = xToGrid(x); 
+    int yGrid = yToGrid(y); 
 
     /* Actually call atc method */
     al_plane(xGrid, yGrid, planeName, flightLevel, airspeed, heading);

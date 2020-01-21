@@ -1,2 +1,10 @@
 # libatc output files, I presume 
 .nfs*
+
+# Output / already built files 
+*.o
+
+# Hacky way to ignore all files without an extension
+*
+!/**/
+!*.*

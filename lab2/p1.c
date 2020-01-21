@@ -25,6 +25,7 @@ int main() {
 
 void displayInput() {
 
+    /* char arrays need initial size, so unsigned char size should be more than enough */
     char planeName[256]; 
     int xPos, yPos; 
     short xPosMiles, yPosMiles;
@@ -38,9 +39,10 @@ void displayInput() {
     /* TODO: Check that the short format specifier is correct */
     int input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
     al_clear();
+    al_clock(1000);
     while (input != EOF) {
 
-        printf("Adding Plane %hd to canvas!\n", counter++); 
+        fprintf(stderr, "Adding Plane %hd to canvas!\n", counter++); 
 
         /* TODO: Fix this to round to the nearest 500 or w/e, instead 
             of straight-up dividing by 500 and truncating */
@@ -49,23 +51,31 @@ void displayInput() {
         yPosMiles = yPos * (1.0 / FEET_PER_MILE);
 
         /* Debug */
-        printf("Read-in Values: \n"); 
-        printf("Plane Name: %s\n", planeName); 
-        printf("X Position (Feet): %d\n", xPos); 
-        printf("X Position (miles): %hd\n", xPosMiles);
-        printf("Y Position (Feet): %d\n", yPos); 
-        printf("Y Position (miles): %hd\n", yPosMiles);
-        printf("Altitude (FL): %d\n", flightLevel);
-        printf("Airspeed (knots): %hd\n", airspeed); 
-        printf("Heading (degrees): %hd\n", heading);
+        fprintf(stderr, "Read-in Values: \n"); 
+        fprintf(stderr, "Plane Name: %s\n", planeName); 
+        fprintf(stderr, "X Position (Feet): %d\n", xPos); 
+        fprintf(stderr, "X Position (miles): %hd\n", xPosMiles);
+        fprintf(stderr, "Y Position (Feet): %d\n", yPos); 
+        fprintf(stderr, "Y Position (miles): %hd\n", yPosMiles);
+        fprintf(stderr, "Altitude (FL): %d\n", flightLevel);
+        fprintf(stderr, "Airspeed (knots): %hd\n", airspeed); 
+        fprintf(stderr, "Heading (degrees): %hd\n", heading);
 
         drawPlane(planeName, xPosMiles, yPosMiles, flightLevel, airspeed, heading); 
-        getchar();   
         input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
     }
 
+    fprintf(stderr, "Read in both planes' data! Exiting while loop.\n");
+
+    fprintf(stderr, "Refreshing atc grid.\n");
     al_refresh();
+
+    fprintf(stderr, "Waiting for char input to proceed.\n");
     getchar();
+
+    sleep(5);
+
+    fprintf(stderr, "Tearing down atc grid.\n");
     al_teardown();
 }
 

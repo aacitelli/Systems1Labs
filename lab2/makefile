@@ -1,7 +1,7 @@
 # Make p1 executable whenever the p1.o file updates 
-p1: p1.o libatc.h
-	gcc -o p1 p1.o -L. -latc -lncurses -lm 
+lab2: lab2.o libatc.h
+	gcc -o lab2 lab2.o -L. -latc -lncurses -lm 
 
 # Recompile whenever my source code is changed 
-p1.o: p1.c libatc.h 
-	gcc -ansi -pedantic -c p1.c 
+lab2.o: lab2.c libatc.h 
+	gcc -ansi -pedantic -c lab2.c 

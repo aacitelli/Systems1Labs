@@ -1,24 +1,12 @@
-Adding Plane 1 to canvas!
-Read-in Values: 
 Plane Name: TwoTwoFive
-X Position (Feet): 1000000
-X Position (miles): 189
-Y Position (Feet): 1000000
-Y Position (miles): 189
-Altitude (FL): 71
-Airspeed (knots): 1396
-Heading (degrees): 225
-Adding Plane 2 to canvas!
-Read-in Values: 
+xPos (Feet): 1000000
+yPos (Feet): 1000000
+Flight Level: 71
+Airspeed (Knots): 1396
+Heading (Degrees): 225
 Plane Name: TwoSevenZero
-X Position (Feet): 1000540
-X Position (miles): 189
-Y Position (Feet): 1000000
-Y Position (miles): 189
-Altitude (FL): 72
-Airspeed (knots): 988
-Heading (degrees): 270
-Read in both planes' data! Exiting while loop.
-Refreshing atc grid.
-Waiting for char input to proceed.
-Tearing down atc grid.
+xPos (Feet): 1000540
+yPos (Feet): 1000000
+Flight Level: 72
+Airspeed (Knots): 988
+Heading (Degrees): 270

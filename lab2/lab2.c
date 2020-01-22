@@ -4,10 +4,11 @@
 #define FEET_PER_KNOT 1.68781
 #define COLORADO_WIDTH_MILES 380
 #define COLORADO_HEIGHT_MILES 280
+#define CHANGE_IN_TIME 60 
 
 /* Function definitions, graphics library */
 #include "libatc.h"
-#include "p1.h"
+#include "lab2.h"
 #include <math.h> 
 #include <stdio.h> /* TODO: Remove this in final product, just here for debug */
 
@@ -22,8 +23,23 @@ int main() {
     }
 }
 
-void displayInput() {
+/* Runs the simulation itself, loading in data then displaying it. Assumes libatc is working, which is checked in main (which calls this). */
+void execSimulation() {
+    short time = 0, frameNumber = 1;
+    al_clear();
+    startPlanes();   
 
+    /* TODO: Change position check to end program when all planes leave picture */
+    while (time < (60 * 10)) {
+        sleep(1); 
+        time++;
+        al_clock(time * CHANGE_IN_TIME);
+        al_refresh();
+    }
+    al_teardown();
+}
+
+void startPlanes() {
     char planeName[15]; 
     int xPos, yPos, altitude; 
     short xPosMiles, yPosMiles, flightLevel, airspeed, heading;
@@ -32,34 +48,17 @@ void displayInput() {
     while (input != EOF) {
 
         flightLevel = getFlightLevelFromFeet(altitude);
-        xPosMiles = xPos * (1.0 / FEET_PER_MILE);
-        yPosMiles = yPos * (1.0 / FEET_PER_MILE);
 
-        drawPlane(planeName, xPosMiles, yPosMiles, flightLevel, airspeed, heading); 
+        fprintf(stderr, "Plane Name: %s\n", planeName); 
+        fprintf(stderr, "xPos (Feet): %d\n", xPos); 
+        fprintf(stderr, "yPos (Feet): %d\n", yPos);
+        fprintf(stderr, "Flight Level: %d\n", flightLevel);
+        fprintf(stderr, "Airspeed (Knots): %hd\n", airspeed);
+        fprintf(stderr, "Heading (Degrees): %hd\n", heading);
+
+        drawPlane(planeName, xPos, yPos, flightLevel, airspeed, heading); 
         input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
     }
-
-    al_refresh();
-    /* To make this hang, use getchar() (though I can't get that to work) or a sleep(seconds) statement here */
-    al_teardown();
-}
-
-/* Runs the simulation itself, loading in data then displaying it. Assumes libatc is working, which is checked in main (which calls this). */
-void execSimulation() {
-    short time = 0;
-    short frameNumber = 1; 
-    while (time < 10) {
-        execFrame(time); 
-        sleep(1); 
-        time++;
-    }
-}
-
-/* Updates the frame with exactly 1 second's worth of action */
-void execFrame(short time) {
-    al_clear();
-    al_clock(time);
-    al_plane(40, 9, "Blackbird", 455, 2200, 45);
     al_refresh();
 }
 

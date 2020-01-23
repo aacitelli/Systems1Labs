@@ -27,7 +27,7 @@ void testYFunctions() {
 /* Tests the isOverColorado function */
 int main() {
     testXFunctions(); 
-    textYFunctions();
+    testYFunctions();
     return 0;
 }
 

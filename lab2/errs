@@ -1,12 +1,14 @@
 Plane Name: TwoTwoFive
-xPos (Feet): 1000000
-yPos (Feet): 1000000
+xPos (Feet): 15000
+yPos (Feet): 15000
 Flight Level: 71
 Airspeed (Knots): 1396
 Heading (Degrees): 225
+ERROR: al_plane: bad x,y values (2,1)
 Plane Name: TwoSevenZero
-xPos (Feet): 1000540
-yPos (Feet): 1000000
+xPos (Feet): 15000
+yPos (Feet): 1056000
 Flight Level: 72
 Airspeed (Knots): 988
 Heading (Degrees): 270
+ERROR: al_plane: bad x,y values (2,6)

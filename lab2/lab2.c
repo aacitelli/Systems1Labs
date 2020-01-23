@@ -15,12 +15,26 @@
 /* Runs the program, erroring out in the case of import or libatc initialization issues */
 int main() {    
     
+    
+
+    /* Testing feet -> grid units conversion */
+    printf("X Bounds: (%d, %d)\n", al_min_X(), al_max_X()); 
+    printf("Y Bounds: (%d, %d)\n", al_min_Y(), al_max_Y());
+    printf("0 Feet to X Grid: %hd\n", xToGrid(0));
+    printf("0 Feet to y Grid: %hd\n", yToGrid(0));
+    printf("(2006400 - 1) Feet to X Grid: %hd\n", xToGrid(2006399));
+    printf("(1478400 - 1) Feet to X Grid: %hd\n", yToGrid(1478399));
+
+    /* Testing drawPlane */
+    
+    /*
     int initValue = al_initialize();
     if (initValue != 0) {
         execSimulation();
     } else {
         printf("Initialization Error! Error Code %d\n", initValue);
-    }
+    } */
+    return 0;
 }
 
 /* Runs the simulation itself, loading in data then displaying it. Assumes libatc is working, which is checked in main (which calls this). */
@@ -85,17 +99,19 @@ int getFlightLevelFromFeet(int feet) {
 
 /* Reports whether fed-in x,y coordinates (in feet) are in colorado */
 int isOverColorado(int x, int y) {
-    return (x >= 0 && x <= (COLORADO_WIDTH_MILES * FEET_PER_MILE)) && (y >= 0 && y <= (COLORADO_HEIGHT_MILES * FEET_PER_MILE));  
+    return (x >= 0 && x < (COLORADO_WIDTH_MILES * FEET_PER_MILE)) && (y >= 0 && y < (COLORADO_HEIGHT_MILES * FEET_PER_MILE));  
 }
 
 /* Converts passed-in feet amount to *horizontal* grid units */
 short xToGrid(int x) {
-    return ((float) x / FEET_PER_MILE) * (al_max_X() - al_min_X()) / COLORADO_WIDTH_MILES;
+    int gridWidth = al_max_X() - al_min_X();
+    return 1 + ((float) x / FEET_PER_MILE / COLORADO_HEIGHT_MILES * gridWidth);
 }
 
 /* Converts passed-in feet amount to *vertical* grid units */
 short yToGrid(int y) {
-    return ((float) y / FEET_PER_MILE) * (al_max_Y() - al_min_Y()) / COLORADO_HEIGHT_MILES;
+    int gridHeight = al_max_Y() - al_min_Y();
+    return 1 + ((float) y / FEET_PER_MILE / COLORADO_HEIGHT_MILES * gridHeight);
 }
 
 /* Draws a plane with the given parameters */

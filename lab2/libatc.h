@@ -1,5 +1,3 @@
-
-
 /* what are the drawable x and Y values ? */
 int al_min_X();
 int al_min_Y();
@@ -22,7 +20,6 @@ void al_refresh();
 /* put a plane on screen */
 void al_plane(int gx, int gy, char *callsign, short FL, short knots, 
 		short heading);
-
 
 /* not required for lab2 */
 void al_status(const char *statstr);

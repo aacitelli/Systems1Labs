@@ -7,7 +7,7 @@ all: mkprog mkproto
 mkprog: lab2
 
 # Builds all prototype files 
-mkproto: isOverColorado getFlightLevel drawPlanes
+mkproto: isOverColorado getFlightLevel drawPlanes gridConversions
 
 # ! Main program executables 
 # Make p1 executable whenever the p1.o file updates 
@@ -42,3 +42,9 @@ drawPlanes: drawPlanes.o
 # Compile getFlightLevel source code to object code 
 drawPlanes.o: drawPlanes.c 
 	gcc -c drawPlanes.c -ansi -pedantic 
+
+gridConversions: gridConversions.o 
+	gcc gridConversions.o -o gridConversions -L. -latc -lncurses -lm 
+
+gridConversions.o: gridConversions.c 
+	gcc -c gridConversions.c -ansi -pedantic

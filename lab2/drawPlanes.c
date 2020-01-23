@@ -3,10 +3,7 @@
 #include <stdio.h>
 
 void exec_program(); 
-void drawTopLeftPlane(); 
-void drawTopRightPlane(); 
-void drawBottomLeftPlane(); 
-void drawBottomRightPlane();
+void drawPlane(); 
 
 /* Runs the program */
 int main() {
@@ -20,46 +17,33 @@ int main() {
     return 0;
 }
 
-/* Calls all routines that draw the planes */
-void exec_program() {
-    drawTopLeftPlane(); 
-    drawTopRightPlane();
-    drawBottomLeftPlane();
-    drawBottomRightPlane();
+/* Calls all routines that draw the planes, then waits for user input */
+void exec_program() {  
+
+    int gridX = al_min_X() + 2, gridY = al_min_Y() + 2; 
+    char callsign[15] = "A";
+    short flightLevel = 360, knots = 1000, heading = 305; 
+    
+    short time = 0; 
+    while (time < 60 * 60) {
+        al_clear();
+
+        time += 60; 
+    }
+
+    al_clock(0);
+    drawPlane(); 
     al_refresh();
+
     getchar();
     al_teardown();
 }
 
 /* Draws top left plane */
-void drawTopLeftPlane() {
-    int gridX = al_min_X() + 10, gridY = al_min_Y() + 5; 
-    char callsign[15] = "Top Left";
+void drawPlane() {
+    int gridX = al_min_X() + 2, gridY = al_min_Y() + 2; 
+    char callsign[15] = "A";
     short flightLevel = 360, knots = 1000, heading = 305; 
-    al_plane(gridX, gridY, callsign, flightLevel, knots, heading);
-}
-
-/* Draws top right plane */
-void drawTopRightPlane() {
-    int gridX = al_max_X() - 10, gridY = al_min_Y() + 5; 
-    char callsign[15] = "Top Right";
-    short flightLevel = 360, knots = 1000, heading = 45; 
-    al_plane(gridX, gridY, callsign, flightLevel, knots, heading);
-}
-
-/* Draws bottom left plane */
-void drawBottomLeftPlane() {
-    int gridX = al_min_X() + 10, gridY = al_max_Y() - 5; 
-    char callsign[15] = "Bottom Left";
-    short flightLevel = 360, knots = 1000, heading = 225; 
-    al_plane(gridX, gridY, callsign, flightLevel, knots, heading);
-}
-
-/* Draws bottom right plane */
-void drawBottomRightPlane() {
-    int gridX = al_max_X() - 10, gridY = al_max_Y() - 5; 
-    char callsign[15] = "Bottom Right";
-    short flightLevel = 360, knots = 1000, heading = 135; 
     al_plane(gridX, gridY, callsign, flightLevel, knots, heading);
 }
 

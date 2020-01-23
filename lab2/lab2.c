@@ -4,6 +4,8 @@
 #define FEET_PER_KNOT 1.68781
 #define COLORADO_WIDTH_MILES 380
 #define COLORADO_HEIGHT_MILES 280
+#define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
+#define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
 #define CHANGE_IN_TIME 60 
 
 /* Function definitions, graphics library */
@@ -16,50 +18,52 @@
 int main() {   
     int initValue = al_initialize();
     if (initValue != 0) {
-        execSimulation();
+        atcStartup();
+        al_clear();    
+        inputLoop();
     } else {
-        printf("Initialization Error! Error Code %d\n", initValue);
-    } 
+        fprintf(stderr, "Initialization Error! Error Code %d\n", initValue);
+    }  
+    atcTeardown();
     return 0;
 }
 
-/* Runs the simulation itself, loading in data then displaying it. Assumes libatc is working, which is checked in main (which calls this). */
-void execSimulation() {
-    short time = 0, frameNumber = 1;
-    al_clear();
-    startPlanes();   
-
-    /* TODO: Change position check to end program when all planes leave picture */
-    while (time < (60 * 10)) {
-        sleep(1); 
-        time++;
-        al_clock(time * CHANGE_IN_TIME);
-        al_refresh();
-    }
-    al_teardown();
-}
-
-void startPlanes() {
+/* Loads in data from stdin, sending each plane into the simulation loop sequentially */
+void inputLoop() {
+    int input; 
     char planeName[15]; 
     int xPos, yPos, altitude; 
     short xPosMiles, yPosMiles, flightLevel, airspeed, heading;
-
-    int input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading);
+    input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading);
     while (input != EOF) {
-
         flightLevel = getFlightLevelFromFeet(altitude);
-
-        fprintf(stderr, "Plane Name: %s\n", planeName); 
-        fprintf(stderr, "xPos (Feet): %d\n", xPos); 
-        fprintf(stderr, "yPos (Feet): %d\n", yPos);
-        fprintf(stderr, "Flight Level: %d\n", flightLevel);
-        fprintf(stderr, "Airspeed (Knots): %hd\n", airspeed);
-        fprintf(stderr, "Heading (Degrees): %hd\n", heading);
-
-        drawPlane(planeName, xPos, yPos, flightLevel, airspeed, heading); 
+        timerLoop(planeName, xPos, yPos, flightLevel, airspeed, heading); 
         input = scanf("%s %d %d %d %hd %hd", planeName, &xPos, &yPos, &altitude, &airspeed, &heading); 
     }
-    al_refresh();
+}
+
+/* Goes through the simulation for exactly one plane */
+void timerLoop(char planeName[], int x, int y, short fL, short airspeed, short heading) {
+    short time = 0; 
+    while (isOverColorado(x, y)) {
+        al_clear();
+        drawPlane(planeName, x, y, fL, airspeed, heading);
+        al_refresh();
+        al_clock(time++ * CHANGE_IN_TIME);
+        sleep(1);
+        x = calcNewX(x, heading, airspeed, CHANGE_IN_TIME);
+        y = calcNewY(y, heading, airspeed, CHANGE_IN_TIME);
+    }
+}
+
+/* Runs any functions used during libatc startup */
+void atcStartup() {
+    al_clear();
+}
+
+/* Runs any functions used during libatc shutdown */
+void atcTeardown() {
+    al_teardown();
 }
 
 /* Calculates the new x pos based on old position, the current 
@@ -76,26 +80,24 @@ int calcNewY(int oldY, short currAngle, short planeSpeedKnots, float dt) {
 
 /* Converts passed-in feet amount to *horizontal* grid units */
 short xToGrid(int x) {
-    int gridWidth = al_max_X() - al_min_X();
-    return 1 + ((float) x / FEET_PER_MILE / COLORADO_HEIGHT_MILES * gridWidth);
+    short minX = al_min_X(), maxX = al_max_X();
+    short gridWidth = maxX - minX;
+    return lround(minX + ((float) x * (1.0 / COLORADO_WIDTH_FEET) * (gridWidth / 1.0))); 
 }
 
 /* Converts passed-in feet amount to *vertical* grid units */
 short yToGrid(int y) {
-    int gridHeight = al_max_Y() - al_min_Y();
-    return 1 + ((float) y / FEET_PER_MILE / COLORADO_HEIGHT_MILES * gridHeight);
+    short minY = al_min_Y(), maxY = al_max_Y();
+    short gridHeight = maxY - minY;
+    return lround(minY + ((float) y * (1.0 / COLORADO_HEIGHT_FEET) * (gridHeight / 1.0)));
 }
 
-/* Draws a plane with the given parameters */
+/* Draws a plane with the given parameters. Assumes passed-in x,y are in feet. */
 void drawPlane(char planeName[], int x, int y, 
-    short flightLevel, short airspeed, short heading) {   
-
-    /* By personal convention, all passed values are in feet */
+    short fL, short airspeed, short heading) {   
     int xGrid = xToGrid(x); 
     int yGrid = yToGrid(y); 
-
-    /* Actually call atc method */
-    al_plane(xGrid, yGrid, planeName, flightLevel, airspeed, heading);
+    al_plane(xGrid, yGrid, planeName, fL, airspeed, heading);
 }
 
 /* Returns the flight level given a feet amount */

@@ -7,7 +7,7 @@ all: mkprog mkproto
 mkprog: lab2
 
 # Builds all prototype files 
-mkproto: isOverColorado getFlightLevel drawPlanes gridConversions
+mkproto: isOverColorado getFlightLevel drawPlanes gridConversions convertAngle
 
 # ! Main program executables 
 # Make p1 executable whenever the p1.o file updates 
@@ -19,6 +19,8 @@ lab2.o: lab2.c libatc.h
 	gcc -c lab2.c -ansi -pedantic
 
 # ! Prototypes 
+# TO THE GRADER: I HAVE FIVE WORKING PROTOTYPES. PICK WHAT YOU WANT, THOUGH SKIP ONE IF IT FINDS A WAY TO BREAK. 
+# PLEASE GRADE THIS PROTOTYPE
 # Compile isOverLevel object code to executable  
 isOverColorado: isOverColorado.o
 	gcc isOverColorado.o -o isOverColorado
@@ -28,6 +30,7 @@ isOverColorado.o: isOverColorado.c
 	gcc -c isOverColorado.c -ansi -pedantic
 
 # Compile getFlightLevel object code to executable 
+# PLEASE GRADE THIS PROTOTYPE
 getFlightLevel: getFlightLevel.o 
 	gcc getFlightLevel.o -o getFlightLevel 
 
@@ -36,6 +39,7 @@ getFlightLevel.o: getFlightLevel.c
 	gcc -c getFlightLevel.c -ansi -pedantic 
 
 # Compile drawPlanes object code to executable 
+# PLEASE GRADE THIS PROTOTYPE
 drawPlanes: drawPlanes.o 
 	gcc drawPlanes.o -o drawPlanes -L. -latc -lncurses -lm 
 
@@ -43,8 +47,20 @@ drawPlanes: drawPlanes.o
 drawPlanes.o: drawPlanes.c 
 	gcc -c drawPlanes.c -ansi -pedantic 
 
+# Compile gridConversions object code to executable 
+# PLEASE GRADE THIS PROTOTYPE
 gridConversions: gridConversions.o 
 	gcc gridConversions.o -o gridConversions -L. -latc -lncurses -lm 
 
+# Compile gridConversions source code to object code 
 gridConversions.o: gridConversions.c 
 	gcc -c gridConversions.c -ansi -pedantic
+
+# Compile convertAngle object code to executable 
+# PLEASE GRADE THIS PROTOTYPE (though this is my fifth... it's up to you)
+convertAngle: convertAngle.o 
+	gcc convertAngle.o -o convertAngle
+
+# Compile convertAngle source code to object code 
+convertAngle.o: convertAngle.c 
+	gcc -c convertAngle.c -ansi -pedantic

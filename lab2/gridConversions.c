@@ -56,5 +56,5 @@ short xToGrid(int x) {
 short yToGrid(int y) {
     short minY = al_min_Y(), maxY = al_max_Y();
     short gridHeight = maxY - minY;
-    return lround(minY + ((float) y * (1.0 / COLORADO_HEIGHT_FEET) * (gridHeight / 1.0)));
+    return (1 + maxY) - lround(minY + ((float) y * (1.0 / COLORADO_HEIGHT_FEET) * (gridHeight / 1.0)));
 }

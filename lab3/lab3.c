@@ -87,7 +87,8 @@ void flyPlanes(Simulation *simPtr) {
 
     /* When this becomes a null pointer, we know the linked list is empty and we have no planes left */ 
     while (simPtr->storagePointer != NULL) {
-        outputPlanes(simStruct); 
+        outputPlanes(simPtr); 
+        pilotPlane
     }
 }
 
@@ -99,72 +100,13 @@ void outputPlanes(Simulation *simPtr) {
 
 /* I sort the planes by altitude, set up the graphics for one frame, have the list draw each plane, then toss it all on screen for user viewage */
 void drawPlanes(Simulation *simPtr) {
-    /* Sort planes by altitude */ 
-    /* Set up graphics for this frame */
-    /* Have the list draw each plane */ 
-    /* Put it all on screen */ 
+    sort(simPtr->storagePointer, higher); 
+    al_clear();
+    al_clock(simPtr->elapsedTime); 
+    iterate(simPtr->storagePointer, draw_plane);
     al_refresh(); 
 }
 
-/* I sort the list west to east, put out the header, have the list print each plane, and then toss on a blank line */ 
-void printPlanes(Simulation *simPtr) {
-    /* Sort the list west to east */ 
-    sort(simPtr->storagePointer, westmost); 
-
-    /* Put out the header */ 
-
-    /* Have the list print each plane */ 
-    iterate(simPtr->storagePointer, print_plane); 
-
-    /* Toss on a newline */ 
-    fprintf(stderr, "\n"); 
-}
-
-/* I look at the pilot profile contained in the plane that the list handed me and call the right function from my array of pointers using the profile as a subscript */ 
-void pilotPlane() {
-}
-
-/* Update X, Y, Altitude using any helper functions required */
-void movePlane() {
-
-}
-
-/* Loads in data from stdin, sending each plane into the simulation loop sequentially */
-void inputLoop() {
-    
-}
-
-/* Goes through the simulation for exactly one plane
-void timerLoop(char planeName[], int x, int y, int altitude, double airspeed, short heading) {
-    short time = 0; 
-    while (isOverColorado(x, y)) {
-        al_clear();        
-        al_clock(time * CHANGE_IN_TIME);
-        drawPlane(planeName, x, y, altitude, airspeed, heading);
-        al_refresh();
-        output(time, planeName, x, y, altitude, airspeed, heading);
-        al_clock((time++) * CHANGE_IN_TIME);        
-        sleep(1);
-        x = calcNewX(x, heading, airspeed, CHANGE_IN_TIME);
-        y = calcNewY(y, heading, airspeed, CHANGE_IN_TIME);
-    }
-}
-*/
-
-/* Outputs the information for a given frame
-void output(short time, char planeName[], int x, int y, int altitude, double airspeed, short heading) {
-    fprintf(stderr, "%3hds ", (time * CHANGE_IN_TIME)); 
-    fprintf(stderr, "%14s ", planeName);
-    fprintf(stderr, "(%7d, %7d) ", x, y);
-    fprintf(stderr, "(%3hd, %3hd) ", xToGrid(x), yToGrid(y));
-    fprintf(stderr, "%5dft ", altitude);
-    fprintf(stderr, "FL%3hd ", getFlightLevelFromFeet(altitude));
-    fprintf(stderr, "%4hdK ", lround(airspeed / FEET_PER_KNOT));
-    fprintf(stderr, "H%3hd\n", heading);
-}
-*/
-
-/* Prints the header information that comes at the beginning of every plane's output
 void printHeaderInformation() {
     fprintf(stderr, " ET  ");
     fprintf(stderr, "   Callsign    ");
@@ -175,64 +117,28 @@ void printHeaderInformation() {
     fprintf(stderr, "Knots ");
     fprintf(stderr, " Deg\n");
 }
-*/
 
-/* Calculates the new x pos based on old position, the current 
-    angle, and how much time has passed */
-int calcNewX(int oldX, short currAngle, short planeSpeedFeet, float dt) {
-    return oldX + planeSpeedFeet * cos(degToRad(convertAngle(currAngle))) * dt;
+/* I sort the list west to east, put out the header, have the list print each plane, and then toss on a blank line */ 
+void printPlanes(Simulation *simPtr) {
+    sort(simPtr->storagePointer, westmost);
+    printHeaderInformation();
+    iterate(simPtr->storagePointer, print_plane); 
+    fprintf(stderr, "\n"); 
 }
 
-/* Calculates the new y pos based on old position, the current 
-    angle, and how much time has passed */
-int calcNewY(int oldY, short currAngle, short planeSpeedFeet, float dt) {
-    return oldY + planeSpeedFeet * sin(degToRad(convertAngle(currAngle))) * dt;
+/* I look at the pilot profile contained in the plane that the list handed me and call the right function from my array of pointers using the profile as a subscript */ 
+void pilotPlane() {
+    
 }
 
-/* Converts passed-in feet amount to *horizontal* grid units */
-short xToGrid(int x) {
-    short minX = al_min_X(), maxX = al_max_X();
-    short gridWidth = maxX - minX;
-    return lround(minX + ((float) x * (1.0 / COLORADO_WIDTH_FEET) * (gridWidth / 1.0))); 
+/* Update X, Y, Altitude using any helper functions required */
+void movePlane() {
+
 }
 
-/* Converts passed-in feet amount to *vertical* grid units */
-short yToGrid(int y) {
-    short minY = al_min_Y(), maxY = al_max_Y();
-    short gridHeight = maxY - minY;
-    return (1 + maxY) - lround(minY + ((float) y * (1.0 / COLORADO_HEIGHT_FEET) * (gridHeight / 1.0)));
-}
-
-/* Draws a plane with the given parameters. Assumes passed-in x,y are in feet. */
-void drawPlane(char planeName[], int x, int y, 
-    short altitude, double airspeed, short heading) {   
-    int xGrid = xToGrid(x); 
-    int yGrid = yToGrid(y); 
-    short fL = getFlightLevelFromFeet(altitude);
-    al_plane(xGrid, yGrid, planeName, fL, airspeed, heading);
-}
-
-/* Returns the flight level given a feet amount */
-int getFlightLevelFromFeet(int feet) {
-    if (feet % 500 < 250) {
-        return (feet - (feet % 500)) / 100; 
-    } else {
-        return (feet + (500 - feet % 500)) / 100;
-    }
-}
-
-/* Reports whether fed-in x,y coordinates (in feet) are in colorado */
-int isOverColorado(int x, int y) {
-    return (x >= 0 && x < (COLORADO_WIDTH_MILES * FEET_PER_MILE)) && (y >= 0 && y < (COLORADO_HEIGHT_MILES * FEET_PER_MILE));  
-}
-
-/* Converts angle in our rotational system to unit circle */
-int convertAngle(int degrees) {
-    int result = 90 - degrees;
-    if (result < 0) {
-        result = 360 + result;
-    }
-    return result;
+/* Loads in data from stdin, sending each plane into the simulation loop sequentially */
+void inputLoop() {
+    
 }
 
 /* Converts degrees to radians */

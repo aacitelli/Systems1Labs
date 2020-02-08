@@ -1,9 +1,9 @@
-typedef struct Simulation {
+typedef struct {
     void *storagePointer; 
     int elapsedTime; 
 } Simulation;
 
-typedef struct Plane {
+typedef struct {
     char *planeName; 
     double x, y, altitude, airspeed; 
     int profile;

@@ -1,5 +1,4 @@
-#include "structs.h"
-#include <stdio.h> 
+#include "planesMemory.h";
 
 /* This function allocates space for a single plane, printing diagnostic
     information and correctly throwing errors. */
@@ -19,5 +18,5 @@ Plane *allocatePlane() {
 void freePlane(Plane *plane) {
     static short numFrees = 0; 
     free(plane); 
-    fprintf("DIAGNOSTIC: freePlane: %hd planes recycled.\n", ++numFrees); 
+    fprintf(stderr, "DIAGNOSTIC: freePlane: %hd planes recycled.\n", ++numFrees); 
 }

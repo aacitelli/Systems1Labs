@@ -1,8 +1,5 @@
 /* This prototype is for all my linked list functions. */ 
-#include "linkedlist.h"
-#include "structs.h"
-#include "libatc.h"
-#include <stdio.h>
+#include "functionPointers.h"
 
 /* Important Constants */
 #define M_PI 3.14159265358979323846
@@ -59,22 +56,22 @@ int getFlightLevelFromFeet(int feet) {
 }
 
 /* Comparison Functions */ 
-int *higher(Plane *high, Plane *low) {
+int higher(Plane *high, Plane *low) {
     return high->altitude > low->altitude; 
 }
 
-int *westmost(Plane *west, Plane *east) {
+int westmost(Plane *west, Plane *east) {
     return west->x < east->x; 
 }
 
 /* Criteria Functions */ 
 /* Always returns true (used only for debug purposes) */
-int *always(Plane *data) {
+int always(Plane *data) {
     return 1; 
 } 
 
 /* Returns true if the given plane is outside Colorado */ 
-int *outside_colorado(Plane *data) {
+int outside_colorado(Plane *data) {
     int isInColorado = (data->x >= 0 && data->x < (COLORADO_WIDTH_MILES * FEET_PER_MILE)) 
         && (data->y >= 0 && data->y < (COLORADO_HEIGHT_MILES * FEET_PER_MILE)); 
     return !isInColorado; 
@@ -82,16 +79,16 @@ int *outside_colorado(Plane *data) {
 
 /* Actions */ 
 /* Deallocates plane data (will be called if it's outside Colorado) */
-void *dispose_plane(Plane *data) {
+void dispose_plane(Plane *data) {
     free(data); 
 }
 
-void *pilot_input(Plane *data) {
+void pilot_input(Plane *data) {
 
 }
 
 /* Prints a single line with all our plane data */ 
-void *print_plane(Plane *data) {
+void print_plane(Plane *data) {
     fprintf(stderr, "%14s ", data->planeName);
     fprintf(stderr, "(%7d, %7d) ", data->x, data->y);
     fprintf(stderr, "(%3hd, %3hd) ", xToGrid(data->x), yToGrid(data->y));
@@ -102,33 +99,15 @@ void *print_plane(Plane *data) {
 }
 
 /* Feeds all our plane data into al_plane to physically draw it on the canvas */ 
-void *draw_plane(Plane *data) { 
+void draw_plane(Plane *data) { 
     al_plane(data->planeName, xToGrid(data->x), yToGrid(data->y), 
         getFlightLevelFromFeet(data->altitude), data->airspeed, data->heading);
 }
 
 /* Calculates the new position of the plane */
-void *move_plane(Plane *data) { 
+void move_plane(Plane *data) { 
     /* TODO: This is inefficient, make the start stuff only run once */
-    static void (*profileBehavior[3])() = {movePlaneProfile0, movePlaneProfile1, movePlaneProfile2}; 
-    profileBehavior[data->profile](); 
-}
-
-/* TODO: Implement */ 
-/* Keep going straight, I think */
-void *movePlaneProfile0() {
-
-}
-
-/* TODO: Implement */ 
-/* Turn slightly left and go slightly up, I think */ 
-void *movePlaneProfile1() {
-
-}
-
-/* TODO: Implement */
-/* Turn slightly right and go slightly down, I think */  
-void *movePlaneProfile2() {
-
+    /* static void (*profileBehavior[3])() = {movePlaneProfile0, movePlaneProfile1, movePlaneProfile2}; 
+    profileBehavior[data->profile](); */
 }
 

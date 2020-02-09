@@ -91,6 +91,7 @@ void addPlane(char *planeName, double x, double y, double altitude, double airsp
     plane->airspeed = airspeed; 
     plane->heading = heading; 
     plane->profile = pilotProfile; 
+    plane->pointerToSim = simPtr; 
 
     /* If it failed to insert, free the pointer we tried to allocate it to */
     wasInserted = insert(&(simPtr->storagePointer), plane, higher);
@@ -105,13 +106,26 @@ void addPlane(char *planeName, double x, double y, double altitude, double airsp
 /* As long as the list has planes, I output them, I have the list pilot them, I have the list move them, and I have the list delete the ones that need it. Somewhere in there I bump the clock. */
 /* This is our actual control loop. */
 void flyPlanes(Simulation *simPtr) {
+    static int framesRendered = 0; 
     /* When this becomes a null pointer, we know the linked list is empty and we have no planes left */ 
     while (simPtr->storagePointer != NULL) {
+        fprintf(stderr, "----------------------------\n");
+        fprintf(stderr, "Still planes in the linked list. Doing frame %d\n", ++framesRendered);
         al_clock(simPtr->elapsedTime++ * CHANGE_IN_TIME); 
+
+        /* Do all screen/file output */
         outputPlanes(simPtr); 
-        /* TODO: Have list pilot them (change direction/altitude) here */
+
+        /* Modify direction, altitude, etc. due to pilot changes */ 
+
+        fprintf(stderr, "Having the list move each plane.\n");
         iterate(simPtr->storagePointer, move_plane); 
-        deleteSome(&(simPtr->storagePointer), &outside_colorado, &dispose_plane);
+
+        fprintf(stderr, "Have the list delete each plane outside of Colorado.\n");
+        deleteSome(&(simPtr->storagePointer), &outside_colorado, dispose_plane);
+
+        fprintf(stderr, "Sleeping for 1 second.\n");
+        sleep(1); 
     }
 }
 
@@ -123,9 +137,13 @@ void outputPlanes(Simulation *simPtr) {
 
 /* I sort the planes by altitude, set up the graphics for one frame, have the list draw each plane, then toss it all on screen for user viewage */
 void drawPlanes(Simulation *simPtr) {
+    fprintf(stderr, "Sorting planes from highest -> lowest altitude.\n");
     sort(simPtr->storagePointer, higher); 
+    fprintf(stderr, "Clearing the canvas.\n");
     al_clear();
-    al_clock(simPtr->elapsedTime); 
+    fprintf(stderr, "Updating clock to %d\n", simPtr->elapsedTime * CHANGE_IN_TIME);
+    al_clock(simPtr->elapsedTime * CHANGE_IN_TIME); 
+    fprintf(stderr, "Having the list iterate through and draw each plane.\n");
     iterate(simPtr->storagePointer, draw_plane);
     al_refresh(); 
 }

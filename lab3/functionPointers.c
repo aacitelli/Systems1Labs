@@ -55,7 +55,8 @@ void dispose_plane(void *data) {
 
 /* Prints a single line with all our plane data */ 
 void print_plane(void *data) {
-    Plane *plane = (Plane *) data; 
+    Plane *plane = (Plane *) data;
+
     fprintf(stderr, "%14s ", plane->planeName);
     fprintf(stderr, "(%7d, %7d) ", plane->x, plane->y);
     fprintf(stderr, "(%3hd, %3hd) ", xToGrid(plane->x), yToGrid(plane->y));
@@ -68,6 +69,17 @@ void print_plane(void *data) {
 /* Feeds all our plane data into al_plane to physically draw it on the canvas */ 
 void draw_plane(void *data) { 
     Plane *plane = (Plane *) data;
+
+    fprintf(stderr, "--------------------------------------\n");
+    fprintf(stderr, "draw_plane: About to draw the following plane:\n");       
+    fprintf(stderr, "Name: %s\n", plane->planeName); 
+    fprintf(stderr, "(x, y) in Feet: (%lf, %lf)\n", plane->x, plane->y); 
+    fprintf(stderr, "Altitude in Feet: %lf\n", plane->altitude); 
+    fprintf(stderr, "Airspeed in Feet: %lf\n", plane->airspeed); 
+    fprintf(stderr, "Heading: %hd\n", plane->heading); 
+    fprintf(stderr, "Flight Profile: %hd\n", plane->profile); 
+    fprintf(stderr, "\n");
+
     al_plane(plane->planeName, xToGrid(plane->x), yToGrid(plane->y), 
         getFlightLevelFromFeet(plane->altitude), plane->airspeed, plane->heading);
 }

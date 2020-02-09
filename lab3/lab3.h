@@ -1,12 +1,17 @@
-/* Our personal libraries */ 
-#include "structs.h"
-#include "linkedlist.h" 
-#include "libatc.h" 
-
 /* System libraries */
 #include <stdio.h> 
 #include <stdlib.h>
 #include <math.h> 
+
+/* Our personal libraries */ 
+#include "structs.h"
+#include "linkedlist.h" 
+#include "libatc.h"
+
+/* Subheaders */
+#include "functionPointers.h"
+#include "planesMemory.h"
+#include "utility.h"
 
 void attemptSim(); 
 void readPlanes(Simulation *simStruct);
@@ -18,15 +23,5 @@ void printHeaderInformation();
 void printPlanes(Simulation *simPtr); 
 void pilotPlane(); 
 void movePlane(Plane *plane); 
-float degToRad(int degrees); 
+float degToRad(int degrees);
 
-/* Functions used elsewhere in the code */
-int higher(Plane *high, Plane *low);
-int westmost(Plane *west, Plane *east);
-int always(Plane *data);
-int outside_colorado(Plane *data);
-void dispose_plane(Plane *data);
-void pilot_input(Plane *data);
-void print_plane(Plane *data);
-void draw_plane(Plane *data);
-void move_plane(Plane *data);

@@ -1,83 +1,51 @@
 /* 
     Purpose of this prototype: 
 
-    Allocates every plane from the stdin stream, checking for memory
-    allocation failures and outputting diagnostic information 
-    if anything fails. 
+    Testing out how to pass stuff to the linked list. Reads in planes from the 
+    linked list, puts them in in altitude order, then does graphical output once. 
 */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "structs.h" 
+#include "linkedlist.h"
+#include "planesMemory.h"
 
-typedef struct Plane {
-    char planeName[41]; /* 40 letters + \0 */
-    int x, y;
-    short altitude, airspeed, heading;
-} Plane; 
+#define M_PI 3.14159265358979323846
+#define FEET_PER_MILE 5280
+#define FEET_PER_KNOT 1.687809855643
+#define COLORADO_WIDTH_MILES 380
+#define COLORADO_HEIGHT_MILES 280
+#define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
+#define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
+#define CHANGE_IN_TIME 60 
 
-void *readInPlanes(Plane *planeArray[]); 
-void printPlanes(); 
+int higher(void *high, void *low) {
+    Plane *highPtr = (Plane *) high; 
+    Plane *lowPtr = (Plane *) low; 
+    return highPtr->altitude > lowPtr->altitude;
+}
+
+void doStuff(Simulation *simPtr, Plane *plane1Ptr, Plane *plane2Ptr) {
+    ComparisonFunction compare = higher; 
+    insert(&simPtr, plane1Ptr, compare);
+    insert(&simPtr, plane2Ptr, compare);
+}
 
 int main() {
-    Plane *planeArray[255]; 
-    readInPlanes(planeArray);
-    printPlanes(planeArray);
-}
-
-void *readInPlanes(Plane **planeArray) {
-    int i = 0, input; /* Tracks which plane index we're on */
-
-    /* Allocating space for our first plane and throwing errors if memory allocation failed */
-    planeArray[i] = malloc(sizeof(Plane));
-    if (planeArray[i] == NULL) {
-        fprintf(stderr, "Couldn't allocate plane %d!\n", (i + 1));
-    } 
-
-    /* Actually reading in the first plane */
-    input = scanf("%s %d %d %hd %hd %hd", planeArray[i]->planeName, &(planeArray[i]->x), &(planeArray[i]->y), 
-            &(planeArray[i]->altitude), &(planeArray[i]->airspeed), &(planeArray[i]->heading));
-
-    while (input != EOF) {
-
-        /* If we got here, we read in the next plane successfully, so we can report a success message for it then move to the next one */
-        fprintf(stdout, "Plane %d read in!\n", i + 1);
-        i++;
-
-        /* Allocate space for next place and ensure it was allocated correctly */
-        planeArray[i] = malloc(sizeof(Plane));
-        if (planeArray[i] == NULL) {
-            fprintf(stderr, "Couldn't allocate plane %d!\n", (i + 1));
-        }
-
-        /* Actually read in next plane */
-        input = scanf("%s %d %d %hd %hd %hd", planeArray[i]->planeName, &(planeArray[i]->x), &(planeArray[i]->y), 
-            &(planeArray[i]->altitude), &(planeArray[i]->airspeed), &(planeArray[i]->heading));
+    Plane *plane1, *plane2; 
+    Simulation *simPtr = (Simulation *) malloc(sizeof(Simulation)); 
+    if (simPtr == NULL) {
+        fprintf(stderr, "Couldn't allocate memory for Simulation struct!\n"); 
+        return -1; 
     }
 
-    return planeArray;
+    plane1 = (Plane *) allocatePlane(); 
+    plane2 = (Plane *) allocatePlane(); 
+
+    doStuff(simPtr, plane1, plane2); 
+
+    freePlane(plane1); 
+    freePlane(plane2); 
 }
-
-void printPlanes(Plane **planeArray) {
-    int i; 
-
-    /* TODO: Modify this to intelligently stop as far as the number of planes goes so 
-        that it doesn't revert to whatever was happening before */
-    for (i = 0; i < 10; i++) {
-
-    }
-}
-
-/* 
-    Allocate space for the initial plane, returning if it fails  
-
-    Read in the initial plane
-
-    while (!EOF) {
-        Say that we read in that plane correctly 
-
-        Preemptively allocate pointer space for the next plane 
-
-        Actually read in the next plane 
-    }
-*/
 

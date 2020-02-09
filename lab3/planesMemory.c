@@ -1,4 +1,6 @@
-#include "planesMemory.h";
+#include "structs.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /* This function allocates space for a single plane, printing diagnostic
     information and correctly throwing errors. */
@@ -8,7 +10,7 @@ Plane *allocatePlane() {
     if (planePtr == NULL) {
         fprintf(stderr, "ERROR: Could not manually allocate memory for plane!\n");
     } else {
-        fprintf(stderr, "DIAGNOSTIC: allocatePlane: %hd planes allocated.", ++numAllocates); 
+        fprintf(stderr, "DIAGNOSTIC: allocatePlane: %hd planes allocated.\n", ++numAllocates); 
     }   
     return planePtr; 
 }

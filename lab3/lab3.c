@@ -75,10 +75,8 @@ void addPlane(char *planeName, double x, double y, int altitude, double airspeed
     plane->airspeed = airspeed; 
     plane->heading = heading; 
     plane->profile = pilotProfile; 
-    plane->pointerToSim = simPtr; 
-
-    fprintf(stderr, "addPlane: Inserting this plane: \n"); 
-    outputPlaneContents(plane);
+    plane->pointerToSim = simPtr;
+    plane->roc = 0;  
 
     /* If it failed to insert, free the pointer we tried to allocate it to */
     wasInserted = insert(&(simPtr->storagePointer), plane, higher);
@@ -97,7 +95,7 @@ void flyPlanes(Simulation *simPtr) {
         iterate(simPtr->storagePointer, pilot_plane);
         iterate(simPtr->storagePointer, move_plane); 
         deleteSome(&(simPtr->storagePointer), outside_colorado, dispose_plane);
-        usleep(200 * MICROSECONDS_PER_MILLISECOND);
+        usleep(100 * MICROSECONDS_PER_MILLISECOND);
     }
 }
 
@@ -117,8 +115,8 @@ void drawPlanes(Simulation *simPtr) {
 }
 
 void printHeaderInformation(Simulation *simPtr) {
-    fprintf(stderr, "Elapsed Time: %d Seconds.\n", (simPtr->elapsedTime - 1) * CHANGE_IN_TIME);
-    fprintf(stderr, "   Callsign    ");
+    fprintf(stderr, "\nElapsed Time: %d Seconds.\n", (simPtr->elapsedTime - 1) * CHANGE_IN_TIME);
+    fprintf(stderr, "      Callsign ");
     fprintf(stderr, "(      x,       y) ");
     fprintf(stderr, "( gx,  gy) ");
     fprintf(stderr, "  Alt   ");
@@ -130,6 +128,7 @@ void printHeaderInformation(Simulation *simPtr) {
 /* I sort the list west to east, put out the header, have the list print each plane, and then toss on a blank line */ 
 void printPlanes(Simulation *simPtr) {
     printHeaderInformation(simPtr);
+    sort(simPtr->storagePointer, westmost);
     iterate(simPtr->storagePointer, print_plane); 
     fprintf(stderr, "\n"); 
 }

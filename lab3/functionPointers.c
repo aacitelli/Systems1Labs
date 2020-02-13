@@ -27,7 +27,7 @@ int higher(void *high, void *low) {
 int westmost(void *west, void *east) {
     Plane *westPtr = (Plane *) west; 
     Plane *eastPtr = (Plane *) east; 
-    return westPtr->x < eastPtr->x; 
+    return westPtr->x <= eastPtr->x; 
 }
 
 /* Returns true if the given plane is outside Colorado */ 
@@ -50,21 +50,19 @@ void print_plane(void *data) {
     Plane *plane = (Plane *) data;
     short xGrid = xToGrid(plane->x), yGrid = yToGrid(plane->y); 
     short flightLevel = getFlightLevelFromFeet(plane->altitude);
-    fprintf(stderr, "%14s (%7d, %7d) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->planeName, plane->x, plane->y, 
+    fprintf(stderr, "%14s (%7.0lf, %7.0lf) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->planeName, plane->x, plane->y, 
         xToGrid(plane->x), yToGrid(plane->y), plane->altitude, flightLevel, lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
 void draw_plane(void *data) { 
     Plane *plane = (Plane *) data;
-    fprintf(stderr, "draw_plane: Outputting the following plane: \n"); 
-    outputPlaneContents(plane);
-    al_plane(xToGrid(plane->x), yToGrid(plane->y), plane->planeName, 
-        getFlightLevelFromFeet(plane->altitude), plane->airspeed, plane->heading);
+    al_plane(xToGrid(plane->x), yToGrid(plane->y), plane->planeName, getFlightLevelFromFeet(plane->altitude), (short) lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
 /* Calculates the new position of the plane */
 void move_plane(void *data) { 
     Plane *plane = (Plane *) data;
+    plane->altitude = plane->altitude + plane->roc; 
     plane->x = calcNewX(plane->x, plane->heading, plane->airspeed); 
     plane->y = calcNewY(plane->y, plane->heading, plane->airspeed);
 }
@@ -74,7 +72,6 @@ void pilot_plane(void *data) {
     Plane *plane = (Plane *) data; 
     static void (*pilotFunctions[3])(Plane *) = {pilot0, pilot1, pilot2}; 
     pilotFunctions[plane->profile](plane);
-    fprintf(stderr, "\n");
 }
 
 /* Executes pilot code for flight profile zero */
@@ -91,7 +88,7 @@ void pilot1(Plane *plane) {
 
 /* If above 20500 feet, turn -15 deg each update */
 void pilot1HeadingChange(Plane *plane) {    
-    if (plane->altitude < 30500) {
+    if (plane->altitude > 20500) {
         plane->heading -= 15; 
         if (plane->heading < 0) {
             plane->heading = 360 + plane->heading;
@@ -105,7 +102,7 @@ void pilot1HeadingChange(Plane *plane) {
 /* Above 19500 feet descend at -400 feet per minute */
 void pilot1AltitudeChange(Plane *plane) {    
     if (plane->altitude > 19500) {
-        plane->altitude -= 400;
+        plane->roc = -400; 
         fprintf(stderr, "descending.\n"); 
     } else {
         fprintf(stderr, "leveled off.\n");
@@ -134,7 +131,7 @@ void pilot2HeadingChange(Plane *plane) {
 /* Below 33500 feet climb at 400 feet per minute */
 void pilot2AltitudeChange(Plane *plane) {    
     if (plane->altitude < 33500) {
-        plane->altitude += 400; 
+        plane->roc = 400; 
         fprintf(stderr, "climbing.\n");
     } else {
         fprintf(stderr, "leveled off.\n");

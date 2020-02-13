@@ -6,7 +6,7 @@
     information and correctly throwing errors. */
 Plane *allocatePlane() {
     static short numAllocates = 0; 
-    Plane *planePtr = malloc(sizeof(Plane)); 
+    Plane *planePtr = (Plane *) malloc(sizeof(Plane)); 
     if (planePtr == NULL) {
         fprintf(stderr, "ERROR: Could not manually allocate memory for plane!\n");
     } else {

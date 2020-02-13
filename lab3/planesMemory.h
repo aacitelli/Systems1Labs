@@ -1,3 +1,5 @@
+#include "structs.h"
+
 #ifndef PLANESMEMORY_H
 #define PLANESMEMORY_H
 

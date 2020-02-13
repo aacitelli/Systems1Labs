@@ -1,3 +1,6 @@
+#ifndef STRUCTS_H
+#define STRUCTS_H
+
 typedef struct {
     void *storagePointer; 
     int elapsedTime; 
@@ -5,8 +8,10 @@ typedef struct {
 
 typedef struct {
     char *planeName; 
-    double x, y, altitude, airspeed; 
-    int profile;
+    double x, y, airspeed; 
+    int profile, altitude;
     short heading;  
     Simulation *pointerToSim; 
 } Plane; 
+
+#endif

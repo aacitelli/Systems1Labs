@@ -27,9 +27,11 @@ int higher(void *high, void *low) {
 }
 
 void doStuff(Simulation *simPtr, Plane *plane1Ptr, Plane *plane2Ptr) {
-    ComparisonFunction compare = higher; 
-    insert(&simPtr, plane1Ptr, compare);
-    insert(&simPtr, plane2Ptr, compare);
+    fprintf(stderr, "Declaring thing\n"); 
+    fprintf(stderr, "Inserting first plane\n");
+    insert(&(simPtr->storagePointer), plane1Ptr, higher);
+    fprintf(stderr, "Inserting Second Plane\n");
+    insert(&(simPtr->storagePointer), plane2Ptr, higher);
 }
 
 int main() {
@@ -40,12 +42,17 @@ int main() {
         return -1; 
     }
 
+    fprintf(stderr, "About to allocate first plane.\n");
     plane1 = (Plane *) allocatePlane(); 
+    fprintf(stderr, "About to allocate second plane.\n");
     plane2 = (Plane *) allocatePlane(); 
 
+    fprintf(stderr, "About to do stuff.\n");
     doStuff(simPtr, plane1, plane2); 
 
+    fprintf(stderr, "About to free plane 1.\n");
     freePlane(plane1); 
+    fprintf(stderr, "About to free plane 2.\n");
     freePlane(plane2); 
 }
 

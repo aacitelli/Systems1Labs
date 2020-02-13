@@ -1,12 +1,15 @@
+#include "structs.h"
+
 #ifndef UTILITY_H 
 #define UTILITY_H
 
-float degToRad(int degrees);
-int convertAngle(int degrees);
-int calcNewX(int oldX, short currAngle, short planeSpeedFeet, float dt);
-int calcNewY(int oldY, short currAngle, short planeSpeedFeet, float dt);
-short xToGrid(int x);
-short yToGrid(int y);
-int getFlightLevelFromFeet(int feet);
+float degToRad(short degrees);
+short convertAngle(short degrees);
+double calcNewX(double oldX, short currAngle, double planeSpeedFeet);
+double calcNewY(double oldY, short currAngle, double planeSpeedFeet);
+short xToGrid(double x);
+short yToGrid(double y);
+short getFlightLevelFromFeet(int feet);
+void outputPlaneContents(Plane *plane); 
 
 #endif 

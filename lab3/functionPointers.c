@@ -5,7 +5,6 @@
 
 /* Our libraries */ 
 #include "functionPointers.h"
-#include "structs.h"
 #include "utility.h"
 
 /* Important Constants */
@@ -16,13 +15,13 @@
 #define COLORADO_HEIGHT_MILES 280
 #define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
 #define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
-#define CHANGE_IN_TIME 60 
+#define CHANGE_IN_TIME 60
 
 /* Comparison Functions */ 
 int higher(void *high, void *low) {
     Plane *highPtr = (Plane *) high; 
     Plane *lowPtr = (Plane *) low; 
-    return highPtr->altitude > lowPtr->altitude; 
+    return highPtr->altitude >= lowPtr->altitude;
 }
 
 int westmost(void *west, void *east) {
@@ -31,62 +30,113 @@ int westmost(void *west, void *east) {
     return westPtr->x < eastPtr->x; 
 }
 
-/* Criteria Functions */ 
-/* Always returns true (used only for debug purposes) */
-int always(void *data) {
-    Plane *plane = (Plane *) data; 
-    return 1; 
-} 
-
 /* Returns true if the given plane is outside Colorado */ 
 int outside_colorado(void *data) {
     Plane *plane = (Plane *) data; 
-    int isInColorado = (plane->x >= 0 && plane->x < (COLORADO_WIDTH_MILES * FEET_PER_MILE)) 
-        && (plane->y >= 0 && plane->y < (COLORADO_HEIGHT_MILES * FEET_PER_MILE)); 
-    return !isInColorado; 
+    return !((plane->x >= 0 && plane->x < (COLORADO_WIDTH_MILES * FEET_PER_MILE)) 
+        && (plane->y >= 0 && plane->y < (COLORADO_HEIGHT_MILES * FEET_PER_MILE))); 
 }
 
 /* Actions */ 
 /* Deallocates plane data (will be called if it's outside Colorado) */
 void dispose_plane(void *data) {
     Plane *plane = (Plane *) data;
+    fprintf(stderr, "DIAGNOSTIC: %s leaves the simulation.\n", plane->planeName);
     free(plane); 
 }
 
 /* Prints a single line with all our plane data */ 
 void print_plane(void *data) {
     Plane *plane = (Plane *) data;
-
-    fprintf(stderr, "%14s ", plane->planeName);
-    fprintf(stderr, "(%7d, %7d) ", plane->x, plane->y);
-    fprintf(stderr, "(%3hd, %3hd) ", xToGrid(plane->x), yToGrid(plane->y));
-    fprintf(stderr, "%5dft ", plane->altitude);
-    fprintf(stderr, "FL%3hd ", getFlightLevelFromFeet(plane->altitude));
-    fprintf(stderr, "%4hdK ", lround(plane->airspeed / FEET_PER_KNOT));
-    fprintf(stderr, "H%3hd\n", plane->heading);
+    short xGrid = xToGrid(plane->x), yGrid = yToGrid(plane->y); 
+    short flightLevel = getFlightLevelFromFeet(plane->altitude);
+    fprintf(stderr, "%14s (%7d, %7d) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->planeName, plane->x, plane->y, 
+        xToGrid(plane->x), yToGrid(plane->y), plane->altitude, flightLevel, lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
-/* Feeds all our plane data into al_plane to physically draw it on the canvas */ 
 void draw_plane(void *data) { 
     Plane *plane = (Plane *) data;
-
-    fprintf(stderr, "--------------------------------------\n");
-    fprintf(stderr, "draw_plane: About to draw the following plane:\n");       
-    fprintf(stderr, "Name: %s\n", plane->planeName); 
-    fprintf(stderr, "(x, y) in Feet: (%lf, %lf)\n", plane->x, plane->y); 
-    fprintf(stderr, "Altitude in Feet: %lf\n", plane->altitude); 
-    fprintf(stderr, "Airspeed in Feet: %lf\n", plane->airspeed); 
-    fprintf(stderr, "Heading: %hd\n", plane->heading); 
-    fprintf(stderr, "Flight Profile: %hd\n", plane->profile); 
-    fprintf(stderr, "\n");
-
-    al_plane(plane->planeName, xToGrid(plane->x), yToGrid(plane->y), 
+    fprintf(stderr, "draw_plane: Outputting the following plane: \n"); 
+    outputPlaneContents(plane);
+    al_plane(xToGrid(plane->x), yToGrid(plane->y), plane->planeName, 
         getFlightLevelFromFeet(plane->altitude), plane->airspeed, plane->heading);
 }
 
 /* Calculates the new position of the plane */
 void move_plane(void *data) { 
+    Plane *plane = (Plane *) data;
+    plane->x = calcNewX(plane->x, plane->heading, plane->airspeed); 
+    plane->y = calcNewY(plane->y, plane->heading, plane->airspeed);
+}
+
+/* Decides how we change plane direction/height */
+void pilot_plane(void *data) {
     Plane *plane = (Plane *) data; 
-    plane->x = calcNewX(plane->x, plane->heading, plane->airspeed, CHANGE_IN_TIME); 
-    plane->y = calcNewX(plane->x, plane->heading, plane->airspeed, CHANGE_IN_TIME);
+    static void (*pilotFunctions[3])(Plane *) = {pilot0, pilot1, pilot2}; 
+    pilotFunctions[plane->profile](plane);
+    fprintf(stderr, "\n");
+}
+
+/* Executes pilot code for flight profile zero */
+void pilot0(Plane *plane) {
+    /* Do nothing, we boring */
+    fprintf(stderr, "DIAGNOSTIC: %s is flying straight and leveled off.\n", plane->planeName);
+}
+
+/* Executes pilot code for flight profile one */
+void pilot1(Plane *plane) {
+    pilot1HeadingChange(plane); 
+    pilot1AltitudeChange(plane);    
+}
+
+/* If above 20500 feet, turn -15 deg each update */
+void pilot1HeadingChange(Plane *plane) {    
+    if (plane->altitude < 30500) {
+        plane->heading -= 15; 
+        if (plane->heading < 0) {
+            plane->heading = 360 + plane->heading;
+        }
+        fprintf(stderr, "DIAGNOSTIC: %s is turning left and ", plane->planeName); 
+    } else {
+        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->planeName); 
+    }
+}
+
+/* Above 19500 feet descend at -400 feet per minute */
+void pilot1AltitudeChange(Plane *plane) {    
+    if (plane->altitude > 19500) {
+        plane->altitude -= 400;
+        fprintf(stderr, "descending.\n"); 
+    } else {
+        fprintf(stderr, "leveled off.\n");
+    }
+}
+
+/* Executes pilot code for flight profile two */
+void pilot2(Plane *plane) {
+    pilot2HeadingChange(plane); 
+    pilot2AltitudeChange(plane); 
+}
+
+/* Below 30500 turn 15 degrees each update */
+void pilot2HeadingChange(Plane *plane) {    
+    if (plane->altitude < 30500) {
+        plane->heading += 15; 
+        if (plane->heading > 360) {
+            plane->heading = plane->heading % 360; 
+        }
+        fprintf(stderr, "DIAGNOSTIC: %s is turning right and ", plane->planeName); 
+    } else {
+        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->planeName);
+    }
+}
+
+/* Below 33500 feet climb at 400 feet per minute */
+void pilot2AltitudeChange(Plane *plane) {    
+    if (plane->altitude < 33500) {
+        plane->altitude += 400; 
+        fprintf(stderr, "climbing.\n");
+    } else {
+        fprintf(stderr, "leveled off.\n");
+    }
 }

@@ -13,15 +13,17 @@
 #include "planesMemory.h"
 #include "utility.h"
 
+#ifndef LAB3_H
+#define LAB3_H
+
 void attemptSim(); 
-void readPlanes(Simulation *simStruct);
-void addPlane(char *planeName, double x, double y, double altitude, double airspeed, short heading, int pilotProfile, Simulation *simStruct);
+void readPlanes(Simulation *simPtr);
+void addPlane(char *planeName, double x, double y, int altitude, double airspeed, short heading, int pilotProfile, Simulation *simPtr);
 void flyPlanes(Simulation *simPtr); 
 void outputPlanes(Simulation *simPtr); 
 void drawPlanes(Simulation *simPtr); 
-void printHeaderInformation(); 
+void printHeaderInformation(Simulation *simPtr); 
 void printPlanes(Simulation *simPtr); 
-void pilotPlane(); 
-void movePlane(Plane *plane); 
-float degToRad(int degrees);
+
+#endif 
 

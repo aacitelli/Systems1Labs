@@ -1,0 +1,458 @@
+Drawable area is (22, 1) to (78, 21)
+DIAGNOSTIC: allocate_plane: 1 planes allocated.
+DIAGNOSTIC: 1 nodes allocated.
+DIAGNOSTIC: allocate_plane: 2 planes allocated.
+DIAGNOSTIC: 2 nodes allocated.
+DIAGNOSTIC: allocate_plane: 3 planes allocated.
+DIAGNOSTIC: 3 nodes allocated.
+DIAGNOSTIC: allocate_plane: 4 planes allocated.
+DIAGNOSTIC: 4 nodes allocated.
+Failed to read: scanf returned -1
+
+Elapsed time:     0 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive (1000000, 1000000) ( 50,   7) 35400ft FL355 1396K H225
+   Descendleft (1000540,  900000) ( 50,   9) 35900ft FL360  988K H270
+  TwoSevenZero (1000540, 1000000) ( 50,   7) 35900ft FL360  988K H270
+    ClimbRight (1000540, 1240000) ( 50,   4) 15000ft FL150  988K H 90
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:    60 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 900036,  900036) ( 47,   9) 35400ft FL355 1396K H225
+  TwoSevenZero ( 900487, 1000000) ( 47,   7) 35900ft FL360  988K H270
+   Descendleft ( 903896,  874104) ( 47,   9) 35500ft FL355  988K H255
+    ClimbRight (1097184, 1214104) ( 53,   4) 15400ft FL155  988K H105
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   120 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 800071,  800071) ( 44,  10) 35400ft FL355 1396K H225
+  TwoSevenZero ( 800433, 1000000) ( 44,   7) 35900ft FL360  988K H270
+   Descendleft ( 817247,  824078) ( 45,  10) 35100ft FL350  988K H240
+    ClimbRight (1183833, 1164078) ( 55,   5) 15800ft FL160  988K H120
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   180 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 700107,  700107) ( 41,  12) 35400ft FL355 1396K H225
+  TwoSevenZero ( 700380, 1000000) ( 41,   7) 35900ft FL360  988K H270
+   Descendleft ( 746499,  753329) ( 43,  11) 34700ft FL345  988K H225
+    ClimbRight (1254581, 1093329) ( 57,   6) 16200ft FL160  988K H135
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   240 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 600143,  600143) ( 39,  13) 35400ft FL355 1396K H225
+  TwoSevenZero ( 600327, 1000000) ( 39,   7) 35900ft FL360  988K H270
+   Descendleft ( 696472,  666680) ( 41,  12) 34300ft FL345  988K H210
+    ClimbRight (1304608, 1006680) ( 59,   7) 16600ft FL165  988K H150
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   300 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 500178,  500178) ( 36,  14) 35400ft FL355 1396K H225
+  TwoSevenZero ( 500273, 1000000) ( 36,   7) 35900ft FL360  988K H270
+   Descendleft ( 670576,  570036) ( 41,  13) 33900ft FL340  988K H195
+    ClimbRight (1330504,  910036) ( 59,   9) 17000ft FL170  988K H165
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   360 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 400214,  400214) ( 33,  16) 35400ft FL355 1396K H225
+  TwoSevenZero ( 400220, 1000000) ( 33,   7) 35900ft FL360  988K H270
+   Descendleft ( 670576,  469983) ( 41,  15) 33500ft FL335  988K H180
+    ClimbRight (1330504,  809983) ( 59,  10) 17400ft FL175  988K H180
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   420 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 300166, 1000000) ( 30,   7) 35900ft FL360  988K H270
+    TwoTwoFive ( 300249,  300249) ( 30,  17) 35400ft FL355 1396K H225
+   Descendleft ( 696472,  373339) ( 41,  16) 33100ft FL330  988K H165
+    ClimbRight (1304608,  713339) ( 59,  11) 17800ft FL180  988K H195
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   480 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 200113, 1000000) ( 27,   7) 35900ft FL360  988K H270
+    TwoTwoFive ( 200285,  200285) ( 27,  19) 35400ft FL355 1396K H225
+   Descendleft ( 746499,  286690) ( 43,  17) 32700ft FL325  988K H150
+    ClimbRight (1254581,  626690) ( 57,  13) 18200ft FL180  988K H210
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   540 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 100060, 1000000) ( 24,   7) 35900ft FL360  988K H270
+    TwoTwoFive ( 100321,  100321) ( 24,  20) 35400ft FL355 1396K H225
+   Descendleft ( 817247,  215942) ( 45,  18) 32300ft FL325  988K H135
+    ClimbRight (1183833,  555942) ( 55,  14) 18600ft FL185  988K H225
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   600 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (      6, 1000000) ( 22,   7) 35900ft FL360  988K H270
+    TwoTwoFive (    356,     356) ( 22,  21) 35400ft FL355 1396K H225
+   Descendleft ( 903896,  165915) ( 47,  19) 31900ft FL320  988K H120
+    ClimbRight (1097184,  505915) ( 53,  14) 19000ft FL190  988K H240
+
+DIAGNOSTIC: TwoSevenZero is flying straight and level.
+DIAGNOSTIC: TwoTwoFive is flying straight and level.
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: TwoSevenZero leaves the simulation.
+DIAGNOSTIC: recycle_plane: 1 planes recycled.
+DIAGNOSTIC: 1 nodes freed.
+DIAGNOSTIC: TwoTwoFive leaves the simulation.
+DIAGNOSTIC: recycle_plane: 2 planes recycled.
+DIAGNOSTIC: 2 nodes freed.
+
+Elapsed time:   660 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft (1000540,  140019) ( 50,  20) 31500ft FL315  988K H105
+    ClimbRight (1000540,  480019) ( 50,  15) 19400ft FL195  988K H255
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   720 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 900487,  480019) ( 47,  15) 19800ft FL200  988K H270
+   Descendleft (1100593,  140019) ( 53,  20) 31100ft FL310  988K H 90
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   780 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 803842,  505915) ( 44,  14) 20200ft FL200  988K H285
+   Descendleft (1197238,  165915) ( 56,  19) 30700ft FL305  988K H 75
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   840 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 717194,  555942) ( 42,  14) 20600ft FL205  988K H300
+   Descendleft (1283886,  215942) ( 58,  18) 30300ft FL305  988K H 60
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   900 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 646445,  626690) ( 40,  13) 21000ft FL210  988K H315
+   Descendleft (1354635,  286690) ( 60,  17) 29900ft FL300  988K H 45
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:   960 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 596419,  713339) ( 38,  11) 21400ft FL215  988K H330
+   Descendleft (1404661,  373339) ( 61,  16) 29500ft FL295  988K H 30
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1020 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 570523,  809983) ( 38,  10) 21800ft FL220  988K H345
+   Descendleft (1430557,  469983) ( 62,  15) 29100ft FL290  988K H 15
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1080 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 570523,  910036) ( 38,   9) 22200ft FL220  988K H360
+   Descendleft (1430557,  570036) ( 62,  13) 28700ft FL285  988K H  0
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1140 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 596419, 1006680) ( 38,   7) 22600ft FL225  988K H 15
+   Descendleft (1404661,  666680) ( 61,  12) 28300ft FL285  988K H345
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1200 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 646445, 1093329) ( 40,   6) 23000ft FL230  988K H 30
+   Descendleft (1354635,  753329) ( 60,  11) 27900ft FL280  988K H330
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1260 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 717194, 1164078) ( 42,   5) 23400ft FL235  988K H 45
+   Descendleft (1283886,  824078) ( 58,  10) 27500ft FL275  988K H315
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1320 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 803842, 1214104) ( 44,   4) 23800ft FL240  988K H 60
+   Descendleft (1197238,  874104) ( 56,   9) 27100ft FL270  988K H300
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1380 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 900487, 1240000) ( 47,   4) 24200ft FL240  988K H 75
+   Descendleft (1100593,  900000) ( 53,   9) 26700ft FL265  988K H285
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1440 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight (1000540, 1240000) ( 50,   4) 24600ft FL245  988K H 90
+   Descendleft (1000540,  900000) ( 50,   9) 26300ft FL265  988K H270
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1500 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 903896,  874104) ( 47,   9) 25900ft FL260  988K H255
+    ClimbRight (1097184, 1214104) ( 53,   4) 25000ft FL250  988K H105
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1560 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 817247,  824078) ( 45,  10) 25500ft FL255  988K H240
+    ClimbRight (1183833, 1164078) ( 55,   5) 25400ft FL255  988K H120
+
+DIAGNOSTIC: Descendleft is turning left and descending.
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+
+Elapsed time:  1620 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 746499,  753329) ( 43,  11) 25100ft FL250  988K H225
+    ClimbRight (1254581, 1093329) ( 57,   6) 25800ft FL260  988K H135
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1680 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 696472,  666680) ( 41,  12) 24700ft FL245  988K H210
+    ClimbRight (1304608, 1006680) ( 59,   7) 26200ft FL260  988K H150
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1740 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 670576,  570036) ( 41,  13) 24300ft FL245  988K H195
+    ClimbRight (1330504,  910036) ( 59,   9) 26600ft FL265  988K H165
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1800 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 670576,  469983) ( 41,  15) 23900ft FL240  988K H180
+    ClimbRight (1330504,  809983) ( 59,  10) 27000ft FL270  988K H180
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1860 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 696472,  373339) ( 41,  16) 23500ft FL235  988K H165
+    ClimbRight (1304608,  713339) ( 59,  11) 27400ft FL275  988K H195
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1920 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 746499,  286690) ( 43,  17) 23100ft FL230  988K H150
+    ClimbRight (1254581,  626690) ( 57,  13) 27800ft FL280  988K H210
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  1980 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 817247,  215942) ( 45,  18) 22700ft FL225  988K H135
+    ClimbRight (1183833,  555942) ( 55,  14) 28200ft FL280  988K H225
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2040 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 903896,  165915) ( 47,  19) 22300ft FL225  988K H120
+    ClimbRight (1097184,  505915) ( 53,  14) 28600ft FL285  988K H240
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2100 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight (1000540,  480019) ( 50,  15) 29000ft FL290  988K H255
+   Descendleft (1000540,  140019) ( 50,  20) 21900ft FL220  988K H105
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2160 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 900487,  480019) ( 47,  15) 29400ft FL295  988K H270
+   Descendleft (1100593,  140019) ( 53,  20) 21500ft FL215  988K H 90
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2220 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 803842,  505915) ( 44,  14) 29800ft FL300  988K H285
+   Descendleft (1197238,  165915) ( 56,  19) 21100ft FL210  988K H 75
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2280 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 717194,  555942) ( 42,  14) 30200ft FL300  988K H300
+   Descendleft (1283886,  215942) ( 58,  18) 20700ft FL205  988K H 60
+
+DIAGNOSTIC: ClimbRight is turning right and climbing.
+DIAGNOSTIC: Descendleft is turning left and descending.
+
+Elapsed time:  2340 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 646445,  626690) ( 40,  13) 30600ft FL305  988K H315
+   Descendleft (1354635,  286690) ( 60,  17) 20300ft FL205  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and descending.
+
+Elapsed time:  2400 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 575697,  697438) ( 38,  12) 31000ft FL310  988K H315
+   Descendleft (1425383,  357438) ( 62,  16) 19900ft FL200  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and descending.
+
+Elapsed time:  2460 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 504948,  768187) ( 36,  11) 31400ft FL315  988K H315
+   Descendleft (1496132,  428187) ( 64,  15) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2520 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 434200,  838935) ( 34,  10) 31800ft FL320  988K H315
+   Descendleft (1566880,  498935) ( 66,  14) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2580 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 363452,  909684) ( 32,   9) 32200ft FL320  988K H315
+   Descendleft (1637628,  569684) ( 68,  13) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2640 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 292703,  980432) ( 30,   8) 32600ft FL325  988K H315
+   Descendleft (1708377,  640432) ( 70,  12) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2700 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 221955, 1051181) ( 28,   7) 33000ft FL330  988K H315
+   Descendleft (1779125,  711181) ( 72,  11) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2760 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 151206, 1121929) ( 26,   6) 33400ft FL335  988K H315
+   Descendleft (1849874,  781929) ( 74,  10) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and climbing.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2820 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight (  80458, 1192677) ( 24,   5) 33800ft FL340  988K H315
+   Descendleft (1920622,  852677) ( 76,   9) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and leveled off.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+
+Elapsed time:  2880 seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight (   9710, 1263426) ( 22,   4) 33800ft FL340  988K H315
+   Descendleft (1991370,  923426) ( 78,   8) 19500ft FL195  988K H 45
+
+DIAGNOSTIC: ClimbRight is flying straight and leveled off.
+DIAGNOSTIC: Descendleft is flying straight and leveled off.
+DIAGNOSTIC: ClimbRight leaves the simulation.
+DIAGNOSTIC: recycle_plane: 3 planes recycled.
+DIAGNOSTIC: 3 nodes freed.
+DIAGNOSTIC: Descendleft leaves the simulation.
+DIAGNOSTIC: recycle_plane: 4 planes recycled.
+DIAGNOSTIC: 4 nodes freed.

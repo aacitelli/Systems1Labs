@@ -1,4 +1,10 @@
-malloc: Count =  1, size = 56.
-malloc: Count =  2, size = 56.
+malloc: Count =  1, size = 16.
+malloc: Count =  2, size = 15.
 malloc: Count =  3, size = 56.
-malloc: Count =  4, size = 56.
+malloc: Count =  4, size = 15.
+malloc: Count =  5, size = 56.
+malloc: Count =  6, size = 15.
+malloc: Count =  7, size = 56.
+malloc: Count =  8, size = 15.
+malloc: Count =  9, size = 56.
+malloc: Count = 10, size = 15.

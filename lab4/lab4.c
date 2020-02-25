@@ -16,6 +16,7 @@
 
 /* Local header files, definitions */
 #include "lab4.h"
+#include "altmem.h" 
 
 /* Runs the program, erroring out in the case of import or libatc initialization issues */
 int main() {   
@@ -33,22 +34,18 @@ int main() {
 
 /* I need to read planes and then fly planes */
 void attemptSim() {
-    Simulation *simPtr = (Simulation *) malloc(sizeof(Simulation)); 
-    if (simPtr == NULL) {
-        fprintf(stderr, "ERROR: Failed to allocate space for Simulation structure!\n"); 
-        free(simPtr);
-    } else {
-        simPtr->storagePointer = NULL;
-        readPlanes(simPtr); 
-        flyPlanes(simPtr);
-    }
+    Simulation simObj;
+    simObj.storagePointer = NULL;
+    fprintf(stderr, "Calling readPlanes!\n"); 
+    readPlanes(&simObj); 
+    flyPlanes(&simObj);
 }
 
 /* As long as I can read planes, I add planes to the sim */
 void readPlanes(Simulation *simPtr) {
     static int numPlanesRead = 0; 
     int input, altitude;  
-    char *planeName = (char *) malloc(sizeof(char) * 15); 
+    char planeName[15]; 
     double x, y, airspeed; 
     short heading, pilotProfile;
 
@@ -56,7 +53,6 @@ void readPlanes(Simulation *simPtr) {
     while (input != EOF) {
         airspeed = airspeed * FEET_PER_KNOT;
         addPlane(planeName, x, y, altitude, airspeed, heading, pilotProfile, simPtr);
-        planeName = (char *) malloc(sizeof(char) * 15);
         input = scanf("%s %lf %lf %d %lf %hd %hd", planeName, &x, &y, &altitude, &airspeed, &heading, &pilotProfile); 
     }
 }

@@ -7,7 +7,7 @@ typedef struct {
 } Simulation;
 
 typedef struct {
-    char *planeName; 
+    char planeName[15]; 
     double x, y, airspeed; 
     int profile, altitude, roc;
     short heading;  

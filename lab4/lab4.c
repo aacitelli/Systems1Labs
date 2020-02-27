@@ -50,6 +50,7 @@ void readPlanes(Simulation *simPtr) {
     while (input != EOF) {
         fillDefaultValues(plane, simPtr); 
         addPlane(plane, simPtr);
+        plane = allocatePlane();
         input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
     }
 }

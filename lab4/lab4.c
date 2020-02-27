@@ -57,13 +57,11 @@ void readPlanes(Simulation *simPtr) {
 int fillPlaneValues(Plane *plane, Simulation *simPtr) {
     int input; 
     if (plane != NULL) {
-        fprintf(stderr, "Memory was allocated correctly. Parsing in the current line.\n"); 
         input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
         if (input == EOF) return EOF; 
         fillDefaultValues(plane, simPtr);
         addPlane(plane, simPtr); 
     } else {
-        fprintf(stderr, "Memory wasn't allocated correctly this time through. Getting rid of the current line.\n"); 
         input = scanf("%*s %*lf %*lf %*d %*lf %*hd %*hd"); 
     }
     return input;

@@ -46,16 +46,30 @@ void readPlanes(Simulation *simPtr) {
     Plane *plane; 
     
     plane = allocatePlane(); 
-    input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
+    input = fillPlaneValues(plane, simPtr); 
     while (input != EOF) {
-        fillDefaultValues(plane, simPtr); 
-        addPlane(plane, simPtr);
         plane = allocatePlane();
-        input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
+        input = fillPlaneValues(plane, simPtr); 
     }
 }
 
-/* Fills the plane object's non-read-in values with their default values, and fills the pointer back to the sim */
+/* Read in a single plane's values, skipping a line of input if the malloc failed */
+int fillPlaneValues(Plane *plane, Simulation *simPtr) {
+    int input; 
+    if (plane != NULL) {
+        fprintf(stderr, "Memory was allocated correctly. Parsing in the current line.\n"); 
+        input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
+        if (input == EOF) return EOF; 
+        fillDefaultValues(plane, simPtr);
+        addPlane(plane, simPtr); 
+    } else {
+        fprintf(stderr, "Memory wasn't allocated correctly this time through. Getting rid of the current line.\n"); 
+        input = scanf("%*s %*lf %*lf %*d %*lf %*hd %*hd"); 
+    }
+    return input;
+}
+
+/* Fills the plane object's non-read-in values with their default values, and fills the pointer back to the sim in */
 void fillDefaultValues(Plane *plane, Simulation *simPtr) {
     plane->airspeed = plane->airspeed * FEET_PER_KNOT; 
     plane->roc = 0; 

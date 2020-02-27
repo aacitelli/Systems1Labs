@@ -1,1 +1,5 @@
 malloc: FAIL.
+malloc: Count =  1, size = 64.
+malloc: FAIL.
+malloc: Count =  2, size = 64.
+malloc: Count =  3, size = 64.

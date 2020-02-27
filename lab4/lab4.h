@@ -19,6 +19,7 @@
 
 void attemptSim(); 
 void readPlanes(Simulation *simPtr);
+int fillPlaneValues(Plane *plane, Simulation *simPtr); 
 void fillDefaultValues(Plane *plane, Simulation *simPtr); 
 void addPlane(Plane *plane, Simulation *simPtr);
 void flyPlanes(Simulation *simPtr); 

@@ -16,7 +16,6 @@
 
 /* Local header files, definitions */
 #include "lab4.h"
-#include "altmem.h" 
 
 /* Runs the program, erroring out in the case of import or libatc initialization issues */
 int main() {   
@@ -35,8 +34,7 @@ int main() {
 /* I need to read planes and then fly planes */
 void attemptSim() {
     Simulation simObj;
-    simObj.storagePointer = NULL;
-    fprintf(stderr, "Calling readPlanes!\n"); 
+    simObj.storagePointer = NULL;    
     readPlanes(&simObj); 
     flyPlanes(&simObj);
 }
@@ -44,43 +42,33 @@ void attemptSim() {
 /* As long as I can read planes, I add planes to the sim */
 void readPlanes(Simulation *simPtr) {
     static int numPlanesRead = 0; 
-    int input, altitude;  
-    char planeName[15]; 
-    double x, y, airspeed; 
-    short heading, pilotProfile;
-
-    input = scanf("%s %lf %lf %d %lf %hd %hd", planeName, &x, &y, &altitude, &airspeed, &heading, &pilotProfile); 
+    int input; 
+    Plane *plane; 
+    
+    plane = allocatePlane(); 
+    input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
     while (input != EOF) {
-        airspeed = airspeed * FEET_PER_KNOT;
-        addPlane(planeName, x, y, altitude, airspeed, heading, pilotProfile, simPtr);
-        input = scanf("%s %lf %lf %d %lf %hd %hd", planeName, &x, &y, &altitude, &airspeed, &heading, &pilotProfile); 
+        fillDefaultValues(plane, simPtr); 
+        addPlane(plane, simPtr);
+        input = scanf("%s %lf %lf %d %lf %hd %hd", plane->callsign, &(plane->x), &(plane->y), &(plane->altitude), &(plane->airspeed), &(plane->heading), &(plane->profile)); 
     }
 }
 
-/* I take read-in data, move it to dynamic memory, and put that on the list in altitude order */
-void addPlane(char *planeName, double x, double y, int altitude, double airspeed, short heading, int pilotProfile, Simulation *simPtr) {
-    /* Dynamically allocate one plane's worth of memory */
+/* Fills the plane object's non-read-in values with their default values, and fills the pointer back to the sim */
+void fillDefaultValues(Plane *plane, Simulation *simPtr) {
+    plane->airspeed = plane->airspeed * FEET_PER_KNOT; 
+    plane->roc = 0; 
+    plane->pointerToSim = simPtr; 
+}
+
+/* I take read-in data and put that on the list in altitude order */
+void addPlane(Plane *plane, Simulation *simPtr) {
     int wasInserted;
-    Plane *plane = (Plane *) allocatePlane(); 
-    fillPlaneData(plane, planeName, x, y, airspeed, pilotProfile, altitude, heading, simPtr); 
     wasInserted = insert(&(simPtr->storagePointer), plane, higher);
     if (wasInserted == 0) {
         fprintf(stderr, "ERROR: Couldn't insert plane into the linked list!\n"); 
         free(plane);
     }
-}
-
-/* I fill a plane structure with the passed-in data */
-void fillPlaneData(Plane *plane, char *planeName, double x, double y, double airspeed, int profile, int altitude, short heading, Simulation *simPtr) {
-    plane->planeName = planeName; 
-    plane->x = x; 
-    plane->y = y; 
-    plane->altitude = altitude; 
-    plane->airspeed = airspeed; 
-    plane->heading = heading; 
-    plane->profile = profile; 
-    plane->pointerToSim = simPtr;
-    plane->roc = 0;  
 }
 
 /* As long as the list has planes, I output them, I have the list pilot them, I have the list move them, and I have the list delete the ones that need it. Somewhere in there I bump the clock. */

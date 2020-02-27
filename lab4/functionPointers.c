@@ -43,7 +43,7 @@ int outside_colorado(void *data) {
 /* Deallocates plane data (will be called if it's outside Colorado) */
 void dispose_plane(void *data) {
     Plane *plane = (Plane *) data;
-    fprintf(stderr, "DIAGNOSTIC: %s leaves the simulation.\n", plane->planeName);
+    fprintf(stderr, "DIAGNOSTIC: %s leaves the simulation.\n", plane->callsign);
     free(plane); 
 }
 
@@ -52,14 +52,14 @@ void print_plane(void *data) {
     Plane *plane = (Plane *) data;
     short xGrid = xToGrid(plane->x), yGrid = yToGrid(plane->y); 
     short flightLevel = getFlightLevelFromFeet(plane->altitude);
-    fprintf(stderr, "%14s (%7.0lf, %7.0lf) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->planeName, plane->x, plane->y, 
+    fprintf(stderr, "%14s (%7.0lf, %7.0lf) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->callsign, plane->x, plane->y, 
         xToGrid(plane->x), yToGrid(plane->y), plane->altitude, flightLevel, lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
 /* Draws a passed-in plane data with libatc */
 void draw_plane(void *data) { 
     Plane *plane = (Plane *) data;
-    al_plane(xToGrid(plane->x), yToGrid(plane->y), plane->planeName, getFlightLevelFromFeet(plane->altitude), (short) lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
+    al_plane(xToGrid(plane->x), yToGrid(plane->y), plane->callsign, getFlightLevelFromFeet(plane->altitude), (short) lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
 /* Calculates the new position of the plane */
@@ -80,7 +80,7 @@ void pilot_plane(void *data) {
 /* Executes pilot code for flight profile zero */
 void pilot0(Plane *plane) {
     /* Do nothing, we boring */
-    fprintf(stderr, "DIAGNOSTIC: %s is flying straight and leveled off.\n", plane->planeName);
+    fprintf(stderr, "DIAGNOSTIC: %s is flying straight and leveled off.\n", plane->callsign);
 }
 
 /* Executes pilot code for flight profile one */
@@ -96,9 +96,9 @@ void pilot1HeadingChange(Plane *plane) {
         if (plane->heading < 0) {
             plane->heading = 360 + plane->heading;
         }
-        fprintf(stderr, "DIAGNOSTIC: %s is turning left and ", plane->planeName); 
+        fprintf(stderr, "DIAGNOSTIC: %s is turning left and ", plane->callsign); 
     } else {
-        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->planeName); 
+        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->callsign); 
     }
 }
 
@@ -125,9 +125,9 @@ void pilot2HeadingChange(Plane *plane) {
         if (plane->heading > 360) {
             plane->heading = plane->heading % 360; 
         }
-        fprintf(stderr, "DIAGNOSTIC: %s is turning right and ", plane->planeName); 
+        fprintf(stderr, "DIAGNOSTIC: %s is turning right and ", plane->callsign); 
     } else {
-        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->planeName);
+        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->callsign);
     }
 }
 

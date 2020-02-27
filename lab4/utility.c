@@ -68,7 +68,7 @@ short getFlightLevelFromFeet(int feet) {
 void outputPlaneContents(Plane *plane) {
     fprintf(stderr, "------------------------------\n");
     fprintf(stderr, "outputPlaneContents: \n");
-    fprintf(stderr, "Name: %s\n", plane->planeName);  
+    fprintf(stderr, "Name: %s\n", plane->callsign);  
     fprintf(stderr, "(x,y): (%lf, %lf)\n", plane->x, plane->y); 
     fprintf(stderr, "Airspeed (feet): %lf\n", plane->airspeed); 
     fprintf(stderr, "Flight Profile: %d\n", plane->profile);

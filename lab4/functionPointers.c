@@ -15,7 +15,7 @@
 #define COLORADO_HEIGHT_MILES 280
 #define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
 #define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
-#define CHANGE_IN_TIME 60
+#define CHANGE_IN_TIME 6
 
 /* Comparison Functions */ 
 /* I figure out which of two passed-in planes are higher */
@@ -65,7 +65,9 @@ void draw_plane(void *data) {
 /* Calculates the new position of the plane */
 void move_plane(void *data) { 
     Plane *plane = (Plane *) data;
-    plane->altitude = plane->altitude + plane->roc; 
+
+    /* The 10 is here because we're running at a 10th of the distance  for framerate reasons */
+    plane->altitude = plane->altitude + (plane->roc / 10); 
     plane->x = calcNewX(plane->x, plane->heading, plane->airspeed); 
     plane->y = calcNewY(plane->y, plane->heading, plane->airspeed);
 }
@@ -92,7 +94,9 @@ void pilot1(Plane *plane) {
 /* If above 20500 feet, turn -15 deg each update */
 void pilot1HeadingChange(Plane *plane) {    
     if (plane->altitude > 20500) {
-        plane->heading -= 15; 
+        if (plane->pointerToSim->currentTenthOfSecond == 0) {
+            plane->heading -= 15.0; 
+        }        
         if (plane->heading < 0) {
             plane->heading = 360 + plane->heading;
         }
@@ -121,7 +125,9 @@ void pilot2(Plane *plane) {
 /* Below 30500 turn 15 degrees each update */
 void pilot2HeadingChange(Plane *plane) {    
     if (plane->altitude < 30500) {
-        plane->heading += 15; 
+        if (plane->pointerToSim->currentTenthOfSecond == 0) {
+            plane->heading += 15; 
+        }        
         if (plane->heading > 360) {
             plane->heading = plane->heading % 360; 
         }

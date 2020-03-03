@@ -10,9 +10,13 @@
 #define COLORADO_HEIGHT_MILES 280
 #define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
 #define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
-#define CHANGE_IN_TIME 60
+#define CHANGE_IN_TIME 6
 
-#define MICROSECONDS_PER_MILLISECOND 1000 
+#include <time.h>
+#include "timespec.h"
+
+/* struct timespec request = { 0, 100000001}, remain = {0, 0}; */
+struct timespec request = { 0, 10000001}, remain = {0, 0};
 
 /* Local header files, definitions */
 #include "lab4.h"
@@ -34,7 +38,8 @@ int main() {
 /* I need to read planes and then fly planes */
 void attemptSim() {
     Simulation simObj;
-    simObj.storagePointer = NULL;    
+    simObj.storagePointer = NULL;   
+    simObj.elapsedTime = 0; 
     readPlanes(&simObj); 
     flyPlanes(&simObj);
 }
@@ -93,7 +98,8 @@ void flyPlanes(Simulation *simPtr) {
         iterate(simPtr->storagePointer, pilot_plane);
         iterate(simPtr->storagePointer, move_plane); 
         deleteSome(&(simPtr->storagePointer), outside_colorado, dispose_plane);
-        sleep(1);
+        
+        nanosleep(&request, &remain); 
     }
 }
 
@@ -109,6 +115,8 @@ void drawPlanes(Simulation *simPtr) {
     al_clear();
     al_clock(simPtr->elapsedTime++ * CHANGE_IN_TIME); 
     iterate(simPtr->storagePointer, draw_plane);
+    simPtr->currentTenthOfSecond++; 
+    simPtr->currentTenthOfSecond = simPtr->currentTenthOfSecond % 10;
     al_refresh(); 
 }
 

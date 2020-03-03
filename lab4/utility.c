@@ -11,7 +11,7 @@
 #define COLORADO_HEIGHT_MILES 280
 #define COLORADO_WIDTH_FEET (COLORADO_WIDTH_MILES * FEET_PER_MILE)
 #define COLORADO_HEIGHT_FEET (COLORADO_HEIGHT_MILES * FEET_PER_MILE)
-#define CHANGE_IN_TIME 60 
+#define CHANGE_IN_TIME 6
 
 /* Converts degrees to radians */
 float degToRad(short degrees) {

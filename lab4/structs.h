@@ -3,7 +3,7 @@
 
 typedef struct {
     void *storagePointer; 
-    int elapsedTime; 
+    int elapsedTime, currentTenthOfSecond; 
 } Simulation;
 
 typedef struct {
@@ -12,6 +12,7 @@ typedef struct {
     int profile, altitude, roc;
     short heading;  
     Simulation *pointerToSim; 
+    
 } Plane; 
 
 #endif

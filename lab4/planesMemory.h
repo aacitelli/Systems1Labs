@@ -3,7 +3,7 @@
 #ifndef PLANESMEMORY_H
 #define PLANESMEMORY_H
 
-Plane *allocatePlane(); 
-void freePlane(Plane *plane); 
+Plane *allocatePlane(Simulation *simPtr); 
+void freePlane(Plane *plane, Simulation *simPtr); 
 
 #endif 

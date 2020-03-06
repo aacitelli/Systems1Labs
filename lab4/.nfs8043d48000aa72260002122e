@@ -1,0 +1,1491 @@
+
+Elapsed Time: 0 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive (1000000, 1000000) (104,   4) 35400ft FL355 1396K H225
+   Descendleft (1000540,  900000) (104,   4) 35900ft FL360  988K H270
+  TwoSevenZero (1000540, 1000000) (104,   4) 35900ft FL360  988K H270
+    ClimbRight (1000540, 1240000) (104,   2) 15000ft FL150  988K H 90
+
+
+Elapsed Time: 6 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 990004,  990004) (103,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 990535, 1000000) (103,   4) 35900ft FL360  988K H270
+   Descendleft ( 990535,  900000) (103,   4) 35860ft FL360  988K H270
+    ClimbRight (1010545, 1240000) (105,   2) 15040ft FL150  988K H 90
+
+
+Elapsed Time: 12 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 980007,  980007) (103,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 980529, 1000000) (103,   4) 35900ft FL360  988K H270
+   Descendleft ( 980529,  900000) (103,   4) 35820ft FL360  988K H270
+    ClimbRight (1020551, 1240000) (106,   2) 15080ft FL150  988K H 90
+
+
+Elapsed Time: 18 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 970011,  970011) (102,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 970524, 1000000) (102,   4) 35900ft FL360  988K H270
+   Descendleft ( 970524,  900000) (102,   4) 35780ft FL360  988K H270
+    ClimbRight (1030556, 1240000) (107,   2) 15120ft FL150  988K H 90
+
+
+Elapsed Time: 24 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 960014,  960014) (101,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 960519, 1000000) (101,   4) 35900ft FL360  988K H270
+   Descendleft ( 960519,  900000) (101,   4) 35740ft FL355  988K H270
+    ClimbRight (1040561, 1240000) (108,   2) 15160ft FL150  988K H 90
+
+
+Elapsed Time: 30 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 950018,  950018) (100,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 950513, 1000000) (100,   4) 35900ft FL360  988K H270
+   Descendleft ( 950513,  900000) (100,   4) 35700ft FL355  988K H270
+    ClimbRight (1050567, 1240000) (108,   2) 15200ft FL150  988K H 90
+
+
+Elapsed Time: 36 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 940021,  940021) ( 99,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 940508, 1000000) ( 99,   4) 35900ft FL360  988K H270
+   Descendleft ( 940508,  900000) ( 99,   4) 35660ft FL355  988K H270
+    ClimbRight (1060572, 1240000) (109,   2) 15240ft FL150  988K H 90
+
+
+Elapsed Time: 42 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 930025,  930025) ( 98,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 930503, 1000000) ( 99,   4) 35900ft FL360  988K H270
+   Descendleft ( 930503,  900000) ( 99,   4) 35620ft FL355  988K H270
+    ClimbRight (1070577, 1240000) (110,   2) 15280ft FL155  988K H 90
+
+
+Elapsed Time: 48 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 920029,  920029) ( 98,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 920497, 1000000) ( 98,   4) 35900ft FL360  988K H270
+   Descendleft ( 920497,  900000) ( 98,   4) 35580ft FL355  988K H270
+    ClimbRight (1080583, 1240000) (111,   2) 15320ft FL155  988K H 90
+
+
+Elapsed Time: 54 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 910032,  910032) ( 97,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 910492, 1000000) ( 97,   4) 35900ft FL360  988K H270
+   Descendleft ( 910492,  900000) ( 97,   4) 35540ft FL355  988K H270
+    ClimbRight (1090588, 1240000) (112,   2) 15360ft FL155  988K H 90
+
+
+Elapsed Time: 60 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 900036,  900036) ( 96,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 900487, 1000000) ( 96,   4) 35900ft FL360  988K H270
+   Descendleft ( 900828,  897410) ( 96,   4) 35500ft FL355  988K H255
+    ClimbRight (1100252, 1237410) (112,   2) 15400ft FL155  988K H105
+
+
+Elapsed Time: 66 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 890039,  890039) ( 95,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 890481, 1000000) ( 95,   4) 35900ft FL360  988K H270
+   Descendleft ( 891163,  894821) ( 95,   4) 35460ft FL355  988K H255
+    ClimbRight (1109917, 1234821) (113,   2) 15440ft FL155  988K H105
+
+
+Elapsed Time: 72 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 880043,  880043) ( 94,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 880476, 1000000) ( 94,   4) 35900ft FL360  988K H270
+   Descendleft ( 881499,  892231) ( 94,   4) 35420ft FL355  988K H255
+    ClimbRight (1119581, 1232231) (114,   2) 15480ft FL155  988K H105
+
+
+Elapsed Time: 78 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 870046,  870046) ( 94,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 870471, 1000000) ( 94,   4) 35900ft FL360  988K H270
+   Descendleft ( 871834,  889642) ( 94,   4) 35380ft FL355  988K H255
+    ClimbRight (1129246, 1229642) (115,   2) 15520ft FL155  988K H105
+
+
+Elapsed Time: 84 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 860050,  860050) ( 93,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 860465, 1000000) ( 93,   4) 35900ft FL360  988K H270
+   Descendleft ( 862170,  887052) ( 93,   4) 35340ft FL355  988K H255
+    ClimbRight (1138910, 1227052) (116,   2) 15560ft FL155  988K H105
+
+
+Elapsed Time: 90 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 850053,  850053) ( 92,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 850460, 1000000) ( 92,   4) 35900ft FL360  988K H270
+   Descendleft ( 852505,  884463) ( 92,   4) 35300ft FL355  988K H255
+    ClimbRight (1148575, 1224463) (116,   2) 15600ft FL155  988K H105
+
+
+Elapsed Time: 96 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 840057,  840057) ( 91,   4) 35400ft FL355 1396K H225
+  TwoSevenZero ( 840455, 1000000) ( 91,   4) 35900ft FL360  988K H270
+   Descendleft ( 842841,  881873) ( 91,   4) 35260ft FL355  988K H255
+    ClimbRight (1158239, 1221873) (117,   2) 15640ft FL155  988K H105
+
+
+Elapsed Time: 102 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 830061,  830061) ( 90,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 830449, 1000000) ( 90,   4) 35900ft FL360  988K H270
+   Descendleft ( 833177,  879283) ( 91,   4) 35220ft FL350  988K H255
+    ClimbRight (1167903, 1219283) (118,   2) 15680ft FL155  988K H105
+
+
+Elapsed Time: 108 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 820064,  820064) ( 89,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 820444, 1000000) ( 89,   4) 35900ft FL360  988K H270
+   Descendleft ( 823512,  876694) ( 90,   4) 35180ft FL350  988K H255
+    ClimbRight (1177568, 1216694) (119,   2) 15720ft FL155  988K H105
+
+
+Elapsed Time: 114 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 810068,  810068) ( 89,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 810439, 1000000) ( 89,   4) 35900ft FL360  988K H270
+   Descendleft ( 813848,  874104) ( 89,   4) 35140ft FL350  988K H255
+    ClimbRight (1187232, 1214104) (120,   2) 15760ft FL160  988K H105
+
+
+Elapsed Time: 120 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 800071,  800071) ( 88,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 800433, 1000000) ( 88,   4) 35900ft FL360  988K H270
+   Descendleft ( 805183,  869102) ( 88,   4) 35100ft FL350  988K H240
+    ClimbRight (1195897, 1209102) (120,   2) 15800ft FL160  988K H120
+
+
+Elapsed Time: 126 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 790075,  790075) ( 87,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 790428, 1000000) ( 87,   4) 35900ft FL360  988K H270
+   Descendleft ( 796518,  864099) ( 88,   4) 35060ft FL350  988K H240
+    ClimbRight (1204562, 1204099) (121,   2) 15840ft FL160  988K H120
+
+
+Elapsed Time: 132 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 780078,  780078) ( 86,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 780423, 1000000) ( 86,   4) 35900ft FL360  988K H270
+   Descendleft ( 787853,  859096) ( 87,   4) 35020ft FL350  988K H240
+    ClimbRight (1213227, 1199096) (122,   3) 15880ft FL160  988K H120
+
+
+Elapsed Time: 138 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 770082,  770082) ( 85,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 770417, 1000000) ( 85,   4) 35900ft FL360  988K H270
+   Descendleft ( 779188,  854094) ( 86,   4) 34980ft FL350  988K H240
+    ClimbRight (1221892, 1194094) (122,   3) 15920ft FL160  988K H120
+
+
+Elapsed Time: 144 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 760086,  760086) ( 85,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 760412, 1000000) ( 85,   4) 35900ft FL360  988K H270
+   Descendleft ( 770523,  849091) ( 85,   4) 34940ft FL350  988K H240
+    ClimbRight (1230557, 1189091) (123,   3) 15960ft FL160  988K H120
+
+
+Elapsed Time: 150 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 750089,  750089) ( 84,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 750407, 1000000) ( 84,   4) 35900ft FL360  988K H270
+   Descendleft ( 761859,  844088) ( 85,   4) 34900ft FL350  988K H240
+    ClimbRight (1239221, 1184088) (124,   3) 16000ft FL160  988K H120
+
+
+Elapsed Time: 156 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 740093,  740093) ( 83,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 740401, 1000000) ( 83,   4) 35900ft FL360  988K H270
+   Descendleft ( 753194,  839086) ( 84,   4) 34860ft FL350  988K H240
+    ClimbRight (1247886, 1179086) (125,   3) 16040ft FL160  988K H120
+
+
+Elapsed Time: 162 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 730096,  730096) ( 82,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 730396, 1000000) ( 82,   4) 35900ft FL360  988K H270
+   Descendleft ( 744529,  834083) ( 83,   4) 34820ft FL350  988K H240
+    ClimbRight (1256551, 1174083) (125,   3) 16080ft FL160  988K H120
+
+
+Elapsed Time: 168 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 720100,  720100) ( 81,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 720391, 1000000) ( 81,   4) 35900ft FL360  988K H270
+   Descendleft ( 735864,  829080) ( 83,   5) 34780ft FL350  988K H240
+    ClimbRight (1265216, 1169080) (126,   3) 16120ft FL160  988K H120
+
+
+Elapsed Time: 174 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 710103,  710103) ( 80,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 710385, 1000000) ( 80,   4) 35900ft FL360  988K H270
+   Descendleft ( 727199,  824078) ( 82,   5) 34740ft FL345  988K H240
+    ClimbRight (1273881, 1164078) (127,   3) 16160ft FL160  988K H120
+
+
+Elapsed Time: 180 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 700107,  700107) ( 80,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 700380, 1000000) ( 80,   4) 35900ft FL360  988K H270
+   Descendleft ( 720124,  817003) ( 81,   5) 34700ft FL345  988K H225
+    ClimbRight (1280956, 1157003) (127,   3) 16200ft FL160  988K H135
+
+
+Elapsed Time: 186 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 690110,  690111) ( 79,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 690375, 1000000) ( 79,   4) 35900ft FL360  988K H270
+   Descendleft ( 713049,  809928) ( 81,   5) 34660ft FL345  988K H225
+    ClimbRight (1288031, 1149928) (128,   3) 16240ft FL160  988K H135
+
+
+Elapsed Time: 192 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 680114,  680114) ( 78,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 680369, 1000000) ( 78,   4) 35900ft FL360  988K H270
+   Descendleft ( 705975,  802853) ( 80,   5) 34620ft FL345  988K H225
+    ClimbRight (1295105, 1142853) (129,   3) 16280ft FL165  988K H135
+
+
+Elapsed Time: 198 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 670118,  670118) ( 77,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 670364, 1000000) ( 77,   4) 35900ft FL360  988K H270
+   Descendleft ( 698900,  795778) ( 79,   5) 34580ft FL345  988K H225
+    ClimbRight (1302180, 1135778) (129,   3) 16320ft FL165  988K H135
+
+
+Elapsed Time: 204 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 660121,  660121) ( 76,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 660359, 1000000) ( 76,   4) 35900ft FL360  988K H270
+   Descendleft ( 691825,  788703) ( 79,   5) 34540ft FL345  988K H225
+    ClimbRight (1309255, 1128703) (130,   3) 16360ft FL165  988K H135
+
+
+Elapsed Time: 210 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 650125,  650125) ( 75,   5) 35400ft FL355 1396K H225
+  TwoSevenZero ( 650353, 1000000) ( 75,   4) 35900ft FL360  988K H270
+   Descendleft ( 684750,  781629) ( 78,   5) 34500ft FL345  988K H225
+    ClimbRight (1316330, 1121629) (130,   3) 16400ft FL165  988K H135
+
+
+Elapsed Time: 216 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 640128,  640128) ( 75,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 640348, 1000000) ( 75,   4) 35900ft FL360  988K H270
+   Descendleft ( 677675,  774554) ( 78,   5) 34460ft FL345  988K H225
+    ClimbRight (1323405, 1114554) (131,   3) 16440ft FL165  988K H135
+
+
+Elapsed Time: 222 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 630132,  630132) ( 74,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 630343, 1000000) ( 74,   4) 35900ft FL360  988K H270
+   Descendleft ( 670600,  767479) ( 77,   5) 34420ft FL345  988K H225
+    ClimbRight (1330480, 1107479) (131,   3) 16480ft FL165  988K H135
+
+
+Elapsed Time: 228 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 620135,  620135) ( 73,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 620337, 1000000) ( 73,   4) 35900ft FL360  988K H270
+   Descendleft ( 663525,  760404) ( 77,   5) 34380ft FL345  988K H225
+    ClimbRight (1337554, 1100404) (132,   3) 16520ft FL165  988K H135
+
+
+Elapsed Time: 234 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 610139,  610139) ( 72,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 610332, 1000000) ( 72,   4) 35900ft FL360  988K H270
+   Descendleft ( 656451,  753329) ( 76,   5) 34340ft FL345  988K H225
+    ClimbRight (1344629, 1093329) (133,   3) 16560ft FL165  988K H135
+
+
+Elapsed Time: 240 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 600143,  600143) ( 71,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 600327, 1000000) ( 71,   4) 35900ft FL360  988K H270
+   Descendleft ( 651448,  744664) ( 76,   5) 34300ft FL345  988K H210
+    ClimbRight (1349632, 1084664) (133,   3) 16600ft FL165  988K H150
+
+
+Elapsed Time: 246 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 590146,  590146) ( 71,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 590321, 1000000) ( 71,   4) 35900ft FL360  988K H270
+   Descendleft ( 646445,  735999) ( 75,   5) 34260ft FL345  988K H210
+    ClimbRight (1354635, 1075999) (133,   3) 16640ft FL165  988K H150
+
+
+Elapsed Time: 252 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 580150,  580150) ( 70,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 580316, 1000000) ( 70,   4) 35900ft FL360  988K H270
+   Descendleft ( 641443,  727335) ( 75,   5) 34220ft FL340  988K H210
+    ClimbRight (1359637, 1067335) (134,   3) 16680ft FL165  988K H150
+
+
+Elapsed Time: 258 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 570153,  570153) ( 69,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 570311, 1000000) ( 69,   4) 35900ft FL360  988K H270
+   Descendleft ( 636440,  718670) ( 74,   5) 34180ft FL340  988K H210
+    ClimbRight (1364640, 1058670) (134,   3) 16720ft FL165  988K H150
+
+
+Elapsed Time: 264 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 560157,  560157) ( 68,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 560305, 1000000) ( 68,   4) 35900ft FL360  988K H270
+   Descendleft ( 631437,  710005) ( 74,   5) 34140ft FL340  988K H210
+    ClimbRight (1369643, 1050005) (135,   3) 16760ft FL170  988K H150
+
+
+Elapsed Time: 270 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 550160,  550160) ( 67,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 550300, 1000000) ( 67,   4) 35900ft FL360  988K H270
+   Descendleft ( 626435,  701340) ( 74,   5) 34100ft FL340  988K H210
+    ClimbRight (1374645, 1041340) (135,   3) 16800ft FL170  988K H150
+
+
+Elapsed Time: 276 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 540164,  540164) ( 66,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 540295, 1000000) ( 66,   4) 35900ft FL360  988K H270
+   Descendleft ( 621432,  692675) ( 73,   5) 34060ft FL340  988K H210
+    ClimbRight (1379648, 1032675) (135,   3) 16840ft FL170  988K H150
+
+
+Elapsed Time: 282 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 530167,  530168) ( 66,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 530289, 1000000) ( 66,   4) 35900ft FL360  988K H270
+   Descendleft ( 616429,  684010) ( 73,   5) 34020ft FL340  988K H210
+    ClimbRight (1384651, 1024010) (136,   3) 16880ft FL170  988K H150
+
+
+Elapsed Time: 288 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 520171,  520171) ( 65,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 520284, 1000000) ( 65,   4) 35900ft FL360  988K H270
+   Descendleft ( 611427,  675345) ( 72,   5) 33980ft FL340  988K H210
+    ClimbRight (1389653, 1015345) (136,   4) 16920ft FL170  988K H150
+
+
+Elapsed Time: 294 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 510175,  510175) ( 64,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 510278, 1000000) ( 64,   4) 35900ft FL360  988K H270
+   Descendleft ( 606424,  666680) ( 72,   5) 33940ft FL340  988K H210
+    ClimbRight (1394656, 1006680) (137,   4) 16960ft FL170  988K H150
+
+
+Elapsed Time: 300 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 500178,  500178) ( 63,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 500273, 1000000) ( 63,   4) 35900ft FL360  988K H270
+   Descendleft ( 603834,  657016) ( 72,   5) 33900ft FL340  988K H195
+    ClimbRight (1397246,  997016) (137,   4) 17000ft FL170  988K H165
+
+
+Elapsed Time: 306 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 490182,  490182) ( 62,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 490268, 1000000) ( 62,   4) 35900ft FL360  988K H270
+   Descendleft ( 601245,  647352) ( 71,   5) 33860ft FL340  988K H195
+    ClimbRight (1399835,  987352) (137,   4) 17040ft FL170  988K H165
+
+
+Elapsed Time: 312 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 480185,  480185) ( 61,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 480262, 1000000) ( 61,   4) 35900ft FL360  988K H270
+   Descendleft ( 598655,  637687) ( 71,   6) 33820ft FL340  988K H195
+    ClimbRight (1402425,  977687) (137,   4) 17080ft FL170  988K H165
+
+
+Elapsed Time: 318 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 470189,  470189) ( 61,   6) 35400ft FL355 1396K H225
+  TwoSevenZero ( 470257, 1000000) ( 61,   4) 35900ft FL360  988K H270
+   Descendleft ( 596066,  628023) ( 71,   6) 33780ft FL340  988K H195
+    ClimbRight (1405014,  968023) (138,   4) 17120ft FL170  988K H165
+
+
+Elapsed Time: 324 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 460192,  460192) ( 60,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 460252, 1000000) ( 60,   4) 35900ft FL360  988K H270
+   Descendleft ( 593476,  618358) ( 71,   6) 33740ft FL335  988K H195
+    ClimbRight (1407604,  958358) (138,   4) 17160ft FL170  988K H165
+
+
+Elapsed Time: 330 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 450196,  450196) ( 59,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 450246, 1000000) ( 59,   4) 35900ft FL360  988K H270
+   Descendleft ( 590887,  608694) ( 71,   6) 33700ft FL335  988K H195
+    ClimbRight (1410193,  948694) (138,   4) 17200ft FL170  988K H165
+
+
+Elapsed Time: 336 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 440200,  440200) ( 58,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 440241, 1000000) ( 58,   4) 35900ft FL360  988K H270
+   Descendleft ( 588297,  599030) ( 70,   6) 33660ft FL335  988K H195
+    ClimbRight (1412783,  939030) (138,   4) 17240ft FL170  988K H165
+
+
+Elapsed Time: 342 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 430203,  430203) ( 57,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 430236, 1000000) ( 57,   4) 35900ft FL360  988K H270
+   Descendleft ( 585707,  589365) ( 70,   6) 33620ft FL335  988K H195
+    ClimbRight (1415373,  929365) (138,   4) 17280ft FL175  988K H165
+
+
+Elapsed Time: 348 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 420207,  420207) ( 57,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 420230, 1000000) ( 57,   4) 35900ft FL360  988K H270
+   Descendleft ( 583118,  579701) ( 70,   6) 33580ft FL335  988K H195
+    ClimbRight (1417962,  919701) (139,   4) 17320ft FL175  988K H165
+
+
+Elapsed Time: 354 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 410210,  410210) ( 56,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 410225, 1000000) ( 56,   4) 35900ft FL360  988K H270
+   Descendleft ( 580528,  570036) ( 70,   6) 33540ft FL335  988K H195
+    ClimbRight (1420552,  910036) (139,   4) 17360ft FL175  988K H165
+
+
+Elapsed Time: 360 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    TwoTwoFive ( 400214,  400214) ( 55,   7) 35400ft FL355 1396K H225
+  TwoSevenZero ( 400220, 1000000) ( 55,   4) 35900ft FL360  988K H270
+   Descendleft ( 580528,  560031) ( 70,   6) 33500ft FL335  988K H180
+    ClimbRight (1420552,  900031) (139,   4) 17400ft FL175  988K H180
+
+
+Elapsed Time: 366 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 390214, 1000000) ( 54,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 390217,  390217) ( 54,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  550026) ( 70,   6) 33460ft FL335  988K H180
+    ClimbRight (1420552,  890026) (139,   4) 17440ft FL175  988K H180
+
+
+Elapsed Time: 372 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 380209, 1000000) ( 53,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 380221,  380221) ( 53,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  540020) ( 70,   6) 33420ft FL335  988K H180
+    ClimbRight (1420552,  880020) (139,   4) 17480ft FL175  988K H180
+
+
+Elapsed Time: 378 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 370204, 1000000) ( 52,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 370224,  370225) ( 52,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  530015) ( 70,   6) 33380ft FL335  988K H180
+    ClimbRight (1420552,  870015) (139,   4) 17520ft FL175  988K H180
+
+
+Elapsed Time: 384 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 360198, 1000000) ( 52,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 360228,  360228) ( 52,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  520010) ( 70,   6) 33340ft FL335  988K H180
+    ClimbRight (1420552,  860010) (139,   4) 17560ft FL175  988K H180
+
+
+Elapsed Time: 390 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 350193, 1000000) ( 51,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 350232,  350232) ( 51,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  510004) ( 70,   6) 33300ft FL335  988K H180
+    ClimbRight (1420552,  850004) (139,   4) 17600ft FL175  988K H180
+
+
+Elapsed Time: 396 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 340188, 1000000) ( 50,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 340235,  340235) ( 50,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  499999) ( 70,   6) 33260ft FL335  988K H180
+    ClimbRight (1420552,  839999) (139,   4) 17640ft FL175  988K H180
+
+
+Elapsed Time: 402 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 330182, 1000000) ( 49,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 330239,  330239) ( 49,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  489994) ( 70,   6) 33220ft FL330  988K H180
+    ClimbRight (1420552,  829994) (139,   5) 17680ft FL175  988K H180
+
+
+Elapsed Time: 408 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 320177, 1000000) ( 48,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 320242,  320242) ( 48,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  479988) ( 70,   6) 33180ft FL330  988K H180
+    ClimbRight (1420552,  819988) (139,   5) 17720ft FL175  988K H180
+
+
+Elapsed Time: 414 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 310172, 1000000) ( 48,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 310246,  310246) ( 48,   7) 35400ft FL355 1396K H225
+   Descendleft ( 580528,  469983) ( 70,   6) 33140ft FL330  988K H180
+    ClimbRight (1420552,  809983) (139,   5) 17760ft FL180  988K H180
+
+
+Elapsed Time: 420 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 300166, 1000000) ( 47,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 300249,  300250) ( 47,   7) 35400ft FL355 1396K H225
+   Descendleft ( 583118,  460318) ( 70,   7) 33100ft FL330  988K H165
+    ClimbRight (1417962,  800318) (139,   5) 17800ft FL180  988K H195
+
+
+Elapsed Time: 426 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 290161, 1000000) ( 46,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 290253,  290253) ( 46,   7) 35400ft FL355 1396K H225
+   Descendleft ( 585707,  450654) ( 70,   7) 33060ft FL330  988K H165
+    ClimbRight (1415373,  790654) (138,   5) 17840ft FL180  988K H195
+
+
+Elapsed Time: 432 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 280156, 1000000) ( 45,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 280257,  280257) ( 45,   7) 35400ft FL355 1396K H225
+   Descendleft ( 588297,  440990) ( 70,   7) 33020ft FL330  988K H165
+    ClimbRight (1412783,  780990) (138,   5) 17880ft FL180  988K H195
+
+
+Elapsed Time: 438 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 270150, 1000000) ( 44,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 270260,  270260) ( 44,   8) 35400ft FL355 1396K H225
+   Descendleft ( 590887,  431325) ( 71,   7) 32980ft FL330  988K H165
+    ClimbRight (1410193,  771325) (138,   5) 17920ft FL180  988K H195
+
+
+Elapsed Time: 444 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 260145, 1000000) ( 43,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 260264,  260264) ( 43,   8) 35400ft FL355 1396K H225
+   Descendleft ( 593476,  421661) ( 71,   7) 32940ft FL330  988K H165
+    ClimbRight (1407604,  761661) (138,   5) 17960ft FL180  988K H195
+
+
+Elapsed Time: 450 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 250140, 1000000) ( 43,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 250267,  250267) ( 43,   8) 35400ft FL355 1396K H225
+   Descendleft ( 596066,  411996) ( 71,   7) 32900ft FL330  988K H165
+    ClimbRight (1405014,  751996) (138,   5) 18000ft FL180  988K H195
+
+
+Elapsed Time: 456 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 240134, 1000000) ( 42,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 240271,  240271) ( 42,   8) 35400ft FL355 1396K H225
+   Descendleft ( 598655,  402332) ( 71,   7) 32860ft FL330  988K H165
+    ClimbRight (1402425,  742332) (137,   5) 18040ft FL180  988K H195
+
+
+Elapsed Time: 462 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 230129, 1000000) ( 41,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 230274,  230274) ( 41,   8) 35400ft FL355 1396K H225
+   Descendleft ( 601245,  392668) ( 71,   7) 32820ft FL330  988K H165
+    ClimbRight (1399835,  732668) (137,   5) 18080ft FL180  988K H195
+
+
+Elapsed Time: 468 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 220124, 1000000) ( 40,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 220278,  220278) ( 40,   8) 35400ft FL355 1396K H225
+   Descendleft ( 603834,  383003) ( 72,   7) 32780ft FL330  988K H165
+    ClimbRight (1397246,  723003) (137,   5) 18120ft FL180  988K H195
+
+
+Elapsed Time: 474 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 210118, 1000000) ( 39,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 210282,  210282) ( 39,   8) 35400ft FL355 1396K H225
+   Descendleft ( 606424,  373339) ( 72,   7) 32740ft FL325  988K H165
+    ClimbRight (1394656,  713339) (137,   5) 18160ft FL180  988K H195
+
+
+Elapsed Time: 480 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 200113, 1000000) ( 38,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 200285,  200285) ( 38,   8) 35400ft FL355 1396K H225
+   Descendleft ( 611427,  364674) ( 72,   7) 32700ft FL325  988K H150
+    ClimbRight (1389653,  704674) (136,   5) 18200ft FL180  988K H210
+
+
+Elapsed Time: 486 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 190108, 1000000) ( 38,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 190289,  190289) ( 38,   8) 35400ft FL355 1396K H225
+   Descendleft ( 616429,  356009) ( 73,   7) 32660ft FL325  988K H150
+    ClimbRight (1384651,  696009) (136,   5) 18240ft FL180  988K H210
+
+
+Elapsed Time: 492 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 180102, 1000000) ( 37,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 180292,  180292) ( 37,   8) 35400ft FL355 1396K H225
+   Descendleft ( 621432,  347344) ( 73,   7) 32620ft FL325  988K H150
+    ClimbRight (1379648,  687344) (135,   5) 18280ft FL185  988K H210
+
+
+Elapsed Time: 498 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 170097, 1000000) ( 36,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 170296,  170296) ( 36,   8) 35400ft FL355 1396K H225
+   Descendleft ( 626435,  338679) ( 74,   7) 32580ft FL325  988K H150
+    ClimbRight (1374645,  678679) (135,   5) 18320ft FL185  988K H210
+
+
+Elapsed Time: 504 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 160092, 1000000) ( 35,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 160299,  160299) ( 35,   8) 35400ft FL355 1396K H225
+   Descendleft ( 631437,  330014) ( 74,   7) 32540ft FL325  988K H150
+    ClimbRight (1369643,  670014) (135,   5) 18360ft FL185  988K H210
+
+
+Elapsed Time: 510 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 150086, 1000000) ( 34,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 150303,  150303) ( 34,   8) 35400ft FL355 1396K H225
+   Descendleft ( 636440,  321350) ( 74,   7) 32500ft FL325  988K H150
+    ClimbRight (1364640,  661350) (134,   5) 18400ft FL185  988K H210
+
+
+Elapsed Time: 516 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 140081, 1000000) ( 34,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 140306,  140307) ( 34,   8) 35400ft FL355 1396K H225
+   Descendleft ( 641443,  312685) ( 75,   7) 32460ft FL325  988K H150
+    ClimbRight (1359637,  652685) (134,   5) 18440ft FL185  988K H210
+
+
+Elapsed Time: 522 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 130076, 1000000) ( 33,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 130310,  130310) ( 33,   8) 35400ft FL355 1396K H225
+   Descendleft ( 646445,  304020) ( 75,   7) 32420ft FL325  988K H150
+    ClimbRight (1354635,  644020) (133,   6) 18480ft FL185  988K H210
+
+
+Elapsed Time: 528 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 120070, 1000000) ( 32,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 120314,  120314) ( 32,   8) 35400ft FL355 1396K H225
+   Descendleft ( 651448,  295355) ( 76,   7) 32380ft FL325  988K H150
+    ClimbRight (1349632,  635355) (133,   6) 18520ft FL185  988K H210
+
+
+Elapsed Time: 534 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 110065, 1000000) ( 31,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 110317,  110317) ( 31,   8) 35400ft FL355 1396K H225
+   Descendleft ( 656451,  286690) ( 76,   7) 32340ft FL325  988K H150
+    ClimbRight (1344629,  626690) (133,   6) 18560ft FL185  988K H210
+
+
+Elapsed Time: 540 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero ( 100060, 1000000) ( 30,   4) 35900ft FL360  988K H270
+    TwoTwoFive ( 100321,  100321) ( 30,   8) 35400ft FL355 1396K H225
+   Descendleft ( 663526,  279615) ( 77,   7) 32300ft FL325  988K H135
+    ClimbRight (1337554,  619615) (132,   6) 18600ft FL185  988K H225
+
+
+Elapsed Time: 546 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  90054, 1000000) ( 29,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  90324,   90324) ( 29,   9) 35400ft FL355 1396K H225
+   Descendleft ( 670600,  272540) ( 77,   8) 32260ft FL325  988K H135
+    ClimbRight (1330480,  612540) (131,   6) 18640ft FL185  988K H225
+
+
+Elapsed Time: 552 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  80049, 1000000) ( 29,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  80328,   80328) ( 29,   9) 35400ft FL355 1396K H225
+   Descendleft ( 677675,  265465) ( 78,   8) 32220ft FL320  988K H135
+    ClimbRight (1323405,  605465) (131,   6) 18680ft FL185  988K H225
+
+
+Elapsed Time: 558 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  70044, 1000000) ( 28,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  70331,   70332) ( 28,   9) 35400ft FL355 1396K H225
+   Descendleft ( 684750,  258391) ( 78,   8) 32180ft FL320  988K H135
+    ClimbRight (1316330,  598391) (130,   6) 18720ft FL185  988K H225
+
+
+Elapsed Time: 564 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  60038, 1000000) ( 27,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  60335,   60335) ( 27,   9) 35400ft FL355 1396K H225
+   Descendleft ( 691825,  251316) ( 79,   8) 32140ft FL320  988K H135
+    ClimbRight (1309255,  591316) (130,   6) 18760ft FL190  988K H225
+
+
+Elapsed Time: 570 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  50033, 1000000) ( 26,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  50339,   50339) ( 26,   9) 35400ft FL355 1396K H225
+   Descendleft ( 698900,  244241) ( 79,   8) 32100ft FL320  988K H135
+    ClimbRight (1302180,  584241) (129,   6) 18800ft FL190  988K H225
+
+
+Elapsed Time: 576 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  40028, 1000000) ( 25,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  40342,   40342) ( 25,   9) 35400ft FL355 1396K H225
+   Descendleft ( 705975,  237166) ( 80,   8) 32060ft FL320  988K H135
+    ClimbRight (1295105,  577166) (129,   6) 18840ft FL190  988K H225
+
+
+Elapsed Time: 582 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  30022, 1000000) ( 24,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  30346,   30346) ( 24,   9) 35400ft FL355 1396K H225
+   Descendleft ( 713049,  230091) ( 81,   8) 32020ft FL320  988K H135
+    ClimbRight (1288031,  570091) (128,   6) 18880ft FL190  988K H225
+
+
+Elapsed Time: 588 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  20017, 1000000) ( 24,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  20349,   20349) ( 24,   9) 35400ft FL355 1396K H225
+   Descendleft ( 720124,  223016) ( 81,   8) 31980ft FL320  988K H135
+    ClimbRight (1280956,  563016) (127,   6) 18920ft FL190  988K H225
+
+
+Elapsed Time: 594 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (  10012, 1000000) ( 23,   4) 35900ft FL360  988K H270
+    TwoTwoFive (  10353,   10353) ( 23,   9) 35400ft FL355 1396K H225
+   Descendleft ( 727199,  215942) ( 82,   8) 31940ft FL320  988K H135
+    ClimbRight (1273881,  555942) (127,   6) 18960ft FL190  988K H225
+
+
+Elapsed Time: 600 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+  TwoSevenZero (      6, 1000000) ( 22,   4) 35900ft FL360  988K H270
+    TwoTwoFive (    356,     356) ( 22,   9) 35400ft FL355 1396K H225
+   Descendleft ( 735864,  210939) ( 83,   8) 31900ft FL320  988K H120
+    ClimbRight (1265216,  550939) (126,   6) 19000ft FL190  988K H240
+
+
+Elapsed Time: 606 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 744529,  205936) ( 83,   8) 31860ft FL320  988K H120
+    ClimbRight (1256551,  545936) (125,   6) 19040ft FL190  988K H240
+
+
+Elapsed Time: 612 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 753194,  200934) ( 84,   8) 31820ft FL320  988K H120
+    ClimbRight (1247886,  540934) (125,   6) 19080ft FL190  988K H240
+
+
+Elapsed Time: 618 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 761859,  195931) ( 85,   8) 31780ft FL320  988K H120
+    ClimbRight (1239221,  535931) (124,   6) 19120ft FL190  988K H240
+
+
+Elapsed Time: 624 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 770523,  190928) ( 85,   8) 31740ft FL315  988K H120
+    ClimbRight (1230557,  530928) (123,   6) 19160ft FL190  988K H240
+
+
+Elapsed Time: 630 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 779188,  185926) ( 86,   8) 31700ft FL315  988K H120
+    ClimbRight (1221892,  525926) (122,   6) 19200ft FL190  988K H240
+
+
+Elapsed Time: 636 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 787853,  180923) ( 87,   8) 31660ft FL315  988K H120
+    ClimbRight (1213227,  520923) (122,   6) 19240ft FL190  988K H240
+
+
+Elapsed Time: 642 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 796518,  175920) ( 88,   8) 31620ft FL315  988K H120
+    ClimbRight (1204562,  515920) (121,   6) 19280ft FL195  988K H240
+
+
+Elapsed Time: 648 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 805183,  170918) ( 88,   8) 31580ft FL315  988K H120
+    ClimbRight (1195897,  510918) (120,   6) 19320ft FL195  988K H240
+
+
+Elapsed Time: 654 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 813848,  165915) ( 89,   8) 31540ft FL315  988K H120
+    ClimbRight (1187232,  505915) (120,   6) 19360ft FL195  988K H240
+
+
+Elapsed Time: 660 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 823512,  163325) ( 90,   8) 31500ft FL315  988K H105
+    ClimbRight (1177568,  503325) (119,   6) 19400ft FL195  988K H255
+
+
+Elapsed Time: 666 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 833177,  160736) ( 91,   8) 31460ft FL315  988K H105
+    ClimbRight (1167903,  500736) (118,   6) 19440ft FL195  988K H255
+
+
+Elapsed Time: 672 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 842841,  158146) ( 91,   8) 31420ft FL315  988K H105
+    ClimbRight (1158239,  498146) (117,   6) 19480ft FL195  988K H255
+
+
+Elapsed Time: 678 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 852505,  155557) ( 92,   8) 31380ft FL315  988K H105
+    ClimbRight (1148574,  495557) (116,   6) 19520ft FL195  988K H255
+
+
+Elapsed Time: 684 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 862170,  152967) ( 93,   8) 31340ft FL315  988K H105
+    ClimbRight (1138910,  492967) (116,   6) 19560ft FL195  988K H255
+
+
+Elapsed Time: 690 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 871834,  150377) ( 94,   8) 31300ft FL315  988K H105
+    ClimbRight (1129246,  490377) (115,   6) 19600ft FL195  988K H255
+
+
+Elapsed Time: 696 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 881499,  147788) ( 94,   8) 31260ft FL315  988K H105
+    ClimbRight (1119581,  487788) (114,   6) 19640ft FL195  988K H255
+
+
+Elapsed Time: 702 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 891163,  145198) ( 95,   8) 31220ft FL310  988K H105
+    ClimbRight (1109917,  485198) (113,   6) 19680ft FL195  988K H255
+
+
+Elapsed Time: 708 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 900828,  142609) ( 96,   8) 31180ft FL310  988K H105
+    ClimbRight (1100252,  482609) (112,   6) 19720ft FL195  988K H255
+
+
+Elapsed Time: 714 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 910492,  140019) ( 97,   8) 31140ft FL310  988K H105
+    ClimbRight (1090588,  480019) (112,   6) 19760ft FL200  988K H255
+
+
+Elapsed Time: 720 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 920497,  140019) ( 98,   8) 31100ft FL310  988K H 90
+    ClimbRight (1080583,  480019) (111,   6) 19800ft FL200  988K H270
+
+
+Elapsed Time: 726 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 930503,  140019) ( 99,   8) 31060ft FL310  988K H 90
+    ClimbRight (1070577,  480019) (110,   6) 19840ft FL200  988K H270
+
+
+Elapsed Time: 732 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 940508,  140019) ( 99,   8) 31020ft FL310  988K H 90
+    ClimbRight (1060572,  480019) (109,   6) 19880ft FL200  988K H270
+
+
+Elapsed Time: 738 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 950513,  140019) (100,   8) 30980ft FL310  988K H 90
+    ClimbRight (1050567,  480019) (108,   6) 19920ft FL200  988K H270
+
+
+Elapsed Time: 744 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 960519,  140019) (101,   8) 30940ft FL310  988K H 90
+    ClimbRight (1040561,  480019) (108,   6) 19960ft FL200  988K H270
+
+
+Elapsed Time: 750 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 970524,  140019) (102,   8) 30900ft FL310  988K H 90
+    ClimbRight (1030556,  480019) (107,   6) 20000ft FL200  988K H270
+
+
+Elapsed Time: 756 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 980529,  140019) (103,   8) 30860ft FL310  988K H 90
+    ClimbRight (1020551,  480019) (106,   6) 20040ft FL200  988K H270
+
+
+Elapsed Time: 762 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft ( 990535,  140019) (103,   8) 30820ft FL310  988K H 90
+    ClimbRight (1010545,  480019) (105,   6) 20080ft FL200  988K H270
+
+
+Elapsed Time: 768 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+   Descendleft (1000540,  140019) (104,   8) 30780ft FL310  988K H 90
+    ClimbRight (1000540,  480019) (104,   6) 20120ft FL200  988K H270
+
+
+Elapsed Time: 774 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 990535,  480019) (103,   6) 20160ft FL200  988K H270
+   Descendleft (1010545,  140019) (105,   8) 30740ft FL305  988K H 90
+
+
+Elapsed Time: 780 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 980870,  482609) (103,   6) 20200ft FL200  988K H285
+   Descendleft (1020210,  142609) (106,   8) 30700ft FL305  988K H 75
+
+
+Elapsed Time: 786 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 971206,  485198) (102,   6) 20240ft FL200  988K H285
+   Descendleft (1029874,  145198) (107,   8) 30660ft FL305  988K H 75
+
+
+Elapsed Time: 792 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 961541,  487788) (101,   6) 20280ft FL205  988K H285
+   Descendleft (1039539,  147788) (107,   8) 30620ft FL305  988K H 75
+
+
+Elapsed Time: 798 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 951877,  490377) (100,   6) 20320ft FL205  988K H285
+   Descendleft (1049203,  150377) (108,   8) 30580ft FL305  988K H 75
+
+
+Elapsed Time: 804 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 942213,  492967) ( 99,   6) 20360ft FL205  988K H285
+   Descendleft (1058867,  152967) (109,   8) 30540ft FL305  988K H 75
+
+
+Elapsed Time: 810 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 932548,  495557) ( 99,   6) 20400ft FL205  988K H285
+   Descendleft (1068532,  155557) (110,   8) 30500ft FL305  988K H 75
+
+
+Elapsed Time: 816 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 922884,  498146) ( 98,   6) 20440ft FL205  988K H285
+   Descendleft (1078196,  158146) (111,   8) 30460ft FL305  988K H 75
+
+
+Elapsed Time: 822 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 913219,  500736) ( 97,   6) 20480ft FL205  988K H285
+   Descendleft (1087861,  160736) (111,   8) 30420ft FL305  988K H 75
+
+
+Elapsed Time: 828 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 903555,  503325) ( 96,   6) 20520ft FL205  988K H285
+   Descendleft (1097525,  163325) (112,   8) 30380ft FL305  988K H 75
+
+
+Elapsed Time: 834 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 893891,  505915) ( 96,   6) 20560ft FL205  988K H285
+   Descendleft (1107189,  165915) (113,   8) 30340ft FL305  988K H 75
+
+
+Elapsed Time: 840 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 885226,  510918) ( 95,   6) 20600ft FL205  988K H300
+   Descendleft (1115854,  170918) (114,   8) 30300ft FL305  988K H 60
+
+
+Elapsed Time: 846 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 876561,  515920) ( 94,   6) 20640ft FL205  988K H300
+   Descendleft (1124519,  175920) (114,   8) 30260ft FL305  988K H 60
+
+
+Elapsed Time: 852 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 867896,  520923) ( 93,   6) 20680ft FL205  988K H300
+   Descendleft (1133184,  180923) (115,   8) 30220ft FL300  988K H 60
+
+
+Elapsed Time: 858 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 859231,  525926) ( 93,   6) 20720ft FL205  988K H300
+   Descendleft (1141849,  185926) (116,   8) 30180ft FL300  988K H 60
+
+
+Elapsed Time: 864 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 850566,  530928) ( 92,   6) 20760ft FL210  988K H300
+   Descendleft (1150514,  190928) (117,   8) 30140ft FL300  988K H 60
+
+
+Elapsed Time: 870 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 841901,  535931) ( 91,   6) 20800ft FL210  988K H300
+   Descendleft (1159179,  195931) (117,   8) 30100ft FL300  988K H 60
+
+
+Elapsed Time: 876 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 833236,  540934) ( 91,   6) 20840ft FL210  988K H300
+   Descendleft (1167844,  200934) (118,   8) 30060ft FL300  988K H 60
+
+
+Elapsed Time: 882 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 824572,  545936) ( 90,   6) 20880ft FL210  988K H300
+   Descendleft (1176508,  205936) (119,   8) 30020ft FL300  988K H 60
+
+
+Elapsed Time: 888 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 815907,  550939) ( 89,   6) 20920ft FL210  988K H300
+   Descendleft (1185173,  210939) (119,   8) 29980ft FL300  988K H 60
+
+
+Elapsed Time: 894 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 807242,  555942) ( 88,   6) 20960ft FL210  988K H300
+   Descendleft (1193838,  215942) (120,   8) 29940ft FL300  988K H 60
+
+
+Elapsed Time: 900 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 800167,  563016) ( 88,   6) 21000ft FL210  988K H315
+   Descendleft (1200913,  223016) (121,   8) 29900ft FL300  988K H 45
+
+
+Elapsed Time: 906 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 793092,  570091) ( 87,   6) 21040ft FL210  988K H315
+   Descendleft (1207988,  230091) (121,   8) 29860ft FL300  988K H 45
+
+
+Elapsed Time: 912 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 786017,  577166) ( 87,   6) 21080ft FL210  988K H315
+   Descendleft (1215063,  237166) (122,   8) 29820ft FL300  988K H 45
+
+
+Elapsed Time: 918 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 778942,  584241) ( 86,   6) 21120ft FL210  988K H315
+   Descendleft (1222138,  244241) (123,   8) 29780ft FL300  988K H 45
+
+
+Elapsed Time: 924 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 771868,  591316) ( 85,   6) 21160ft FL210  988K H315
+   Descendleft (1229212,  251316) (123,   8) 29740ft FL295  988K H 45
+
+
+Elapsed Time: 930 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 764793,  598391) ( 85,   6) 21200ft FL210  988K H315
+   Descendleft (1236287,  258391) (124,   8) 29700ft FL295  988K H 45
+
+
+Elapsed Time: 936 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 757718,  605465) ( 84,   6) 21240ft FL210  988K H315
+   Descendleft (1243362,  265465) (124,   8) 29660ft FL295  988K H 45
+
+
+Elapsed Time: 942 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 750643,  612540) ( 84,   6) 21280ft FL215  988K H315
+   Descendleft (1250437,  272540) (125,   8) 29620ft FL295  988K H 45
+
+
+Elapsed Time: 948 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 743568,  619615) ( 83,   6) 21320ft FL215  988K H315
+   Descendleft (1257512,  279615) (125,   7) 29580ft FL295  988K H 45
+
+
+Elapsed Time: 954 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 736493,  626690) ( 83,   6) 21360ft FL215  988K H315
+   Descendleft (1264587,  286690) (126,   7) 29540ft FL295  988K H 45
+
+
+Elapsed Time: 960 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 731491,  635355) ( 82,   6) 21400ft FL215  988K H330
+   Descendleft (1269589,  295355) (126,   7) 29500ft FL295  988K H 30
+
+
+Elapsed Time: 966 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 726488,  644020) ( 82,   6) 21440ft FL215  988K H330
+   Descendleft (1274592,  304020) (127,   7) 29460ft FL295  988K H 30
+
+
+Elapsed Time: 972 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 721485,  652685) ( 81,   5) 21480ft FL215  988K H330
+   Descendleft (1279595,  312685) (127,   7) 29420ft FL295  988K H 30
+
+
+Elapsed Time: 978 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 716483,  661350) ( 81,   5) 21520ft FL215  988K H330
+   Descendleft (1284597,  321350) (128,   7) 29380ft FL295  988K H 30
+
+
+Elapsed Time: 984 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 711480,  670014) ( 81,   5) 21560ft FL215  988K H330
+   Descendleft (1289600,  330014) (128,   7) 29340ft FL295  988K H 30
+
+
+Elapsed Time: 990 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 706477,  678679) ( 80,   5) 21600ft FL215  988K H330
+   Descendleft (1294603,  338679) (128,   7) 29300ft FL295  988K H 30
+
+
+Elapsed Time: 996 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 701475,  687344) ( 80,   5) 21640ft FL215  988K H330
+   Descendleft (1299605,  347344) (129,   7) 29260ft FL295  988K H 30
+
+
+Elapsed Time: 1002 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 696472,  696009) ( 79,   5) 21680ft FL215  988K H330
+   Descendleft (1304608,  356009) (129,   7) 29220ft FL290  988K H 30
+
+
+Elapsed Time: 1008 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 691469,  704674) ( 79,   5) 21720ft FL215  988K H330
+   Descendleft (1309611,  364674) (130,   7) 29180ft FL290  988K H 30
+
+
+Elapsed Time: 1014 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 686467,  713339) ( 78,   5) 21760ft FL220  988K H330
+   Descendleft (1314613,  373339) (130,   7) 29140ft FL290  988K H 30
+
+
+Elapsed Time: 1020 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 683877,  723003) ( 78,   5) 21800ft FL220  988K H345
+   Descendleft (1317203,  383003) (130,   7) 29100ft FL290  988K H 15
+
+
+Elapsed Time: 1026 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 681288,  732668) ( 78,   5) 21840ft FL220  988K H345
+   Descendleft (1319792,  392668) (131,   7) 29060ft FL290  988K H 15
+
+
+Elapsed Time: 1032 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 678698,  742332) ( 78,   5) 21880ft FL220  988K H345
+   Descendleft (1322382,  402332) (131,   7) 29020ft FL290  988K H 15
+
+
+Elapsed Time: 1038 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 676108,  751996) ( 78,   5) 21920ft FL220  988K H345
+   Descendleft (1324972,  411996) (131,   7) 28980ft FL290  988K H 15
+
+
+Elapsed Time: 1044 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 673519,  761661) ( 77,   5) 21960ft FL220  988K H345
+   Descendleft (1327561,  421661) (131,   7) 28940ft FL290  988K H 15
+
+
+Elapsed Time: 1050 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 670929,  771325) ( 77,   5) 22000ft FL220  988K H345
+   Descendleft (1330151,  431325) (131,   7) 28900ft FL290  988K H 15
+
+
+Elapsed Time: 1056 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 668340,  780990) ( 77,   5) 22040ft FL220  988K H345
+   Descendleft (1332740,  440990) (132,   7) 28860ft FL290  988K H 15
+
+
+Elapsed Time: 1062 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 665750,  790654) ( 77,   5) 22080ft FL220  988K H345
+   Descendleft (1335330,  450654) (132,   7) 28820ft FL290  988K H 15
+
+
+Elapsed Time: 1068 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 663161,  800318) ( 77,   5) 22120ft FL220  988K H345
+   Descendleft (1337919,  460318) (132,   7) 28780ft FL290  988K H 15
+
+
+Elapsed Time: 1074 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  809983) ( 76,   5) 22160ft FL220  988K H345
+   Descendleft (1340509,  469983) (132,   6) 28740ft FL285  988K H 15
+
+
+Elapsed Time: 1080 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  819988) ( 76,   5) 22200ft FL220  988K H360
+   Descendleft (1340509,  479988) (132,   6) 28700ft FL285  988K H  0
+
+
+Elapsed Time: 1086 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  829994) ( 76,   5) 22240ft FL220  988K H360
+   Descendleft (1340509,  489994) (132,   6) 28660ft FL285  988K H  0
+
+
+Elapsed Time: 1092 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  839999) ( 76,   4) 22280ft FL225  988K H360
+   Descendleft (1340509,  499999) (132,   6) 28620ft FL285  988K H  0
+
+
+Elapsed Time: 1098 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  850004) ( 76,   4) 22320ft FL225  988K H360
+   Descendleft (1340509,  510004) (132,   6) 28580ft FL285  988K H  0
+
+
+Elapsed Time: 1104 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  860010) ( 76,   4) 22360ft FL225  988K H360
+   Descendleft (1340509,  520010) (132,   6) 28540ft FL285  988K H  0
+
+
+Elapsed Time: 1110 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  870015) ( 76,   4) 22400ft FL225  988K H360
+   Descendleft (1340509,  530015) (132,   6) 28500ft FL285  988K H  0
+
+
+Elapsed Time: 1116 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  880020) ( 76,   4) 22440ft FL225  988K H360
+   Descendleft (1340509,  540020) (132,   6) 28460ft FL285  988K H  0
+
+
+Elapsed Time: 1122 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  890026) ( 76,   4) 22480ft FL225  988K H360
+   Descendleft (1340509,  550026) (132,   6) 28420ft FL285  988K H  0
+
+
+Elapsed Time: 1128 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  900031) ( 76,   4) 22520ft FL225  988K H360
+   Descendleft (1340509,  560031) (132,   6) 28380ft FL285  988K H  0
+
+
+Elapsed Time: 1134 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 660571,  910036) ( 76,   4) 22560ft FL225  988K H360
+   Descendleft (1340509,  570036) (132,   6) 28340ft FL285  988K H  0
+
+
+Elapsed Time: 1140 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 663161,  919701) ( 77,   4) 22600ft FL225  988K H 15
+   Descendleft (1337919,  579701) (132,   6) 28300ft FL285  988K H345
+
+
+Elapsed Time: 1146 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 665750,  929365) ( 77,   4) 22640ft FL225  988K H 15
+   Descendleft (1335330,  589365) (132,   6) 28260ft FL285  988K H345
+
+
+Elapsed Time: 1152 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 668340,  939030) ( 77,   4) 22680ft FL225  988K H 15
+   Descendleft (1332740,  599030) (132,   6) 28220ft FL280  988K H345
+
+
+Elapsed Time: 1158 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 670929,  948694) ( 77,   4) 22720ft FL225  988K H 15
+   Descendleft (1330151,  608694) (131,   6) 28180ft FL280  988K H345
+
+
+Elapsed Time: 1164 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 673519,  958358) ( 77,   4) 22760ft FL230  988K H 15
+   Descendleft (1327561,  618358) (131,   6) 28140ft FL280  988K H345
+
+
+Elapsed Time: 1170 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 676108,  968023) ( 78,   4) 22800ft FL230  988K H 15
+   Descendleft (1324972,  628023) (131,   6) 28100ft FL280  988K H345
+
+
+Elapsed Time: 1176 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 678698,  977687) ( 78,   4) 22840ft FL230  988K H 15
+   Descendleft (1322382,  637687) (131,   6) 28060ft FL280  988K H345
+
+
+Elapsed Time: 1182 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 681288,  987352) ( 78,   4) 22880ft FL230  988K H 15
+   Descendleft (1319792,  647352) (131,   5) 28020ft FL280  988K H345
+
+
+Elapsed Time: 1188 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 683877,  997016) ( 78,   4) 22920ft FL230  988K H 15
+   Descendleft (1317203,  657016) (130,   5) 27980ft FL280  988K H345
+
+
+Elapsed Time: 1194 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 686467, 1006680) ( 78,   4) 22960ft FL230  988K H 15
+   Descendleft (1314613,  666680) (130,   5) 27940ft FL280  988K H345
+
+
+Elapsed Time: 1200 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 691469, 1015345) ( 79,   4) 23000ft FL230  988K H 30
+   Descendleft (1309611,  675345) (130,   5) 27900ft FL280  988K H330
+
+
+Elapsed Time: 1206 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 696472, 1024010) ( 79,   3) 23040ft FL230  988K H 30
+   Descendleft (1304608,  684010) (129,   5) 27860ft FL280  988K H330
+
+
+Elapsed Time: 1212 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 701475, 1032675) ( 80,   3) 23080ft FL230  988K H 30
+   Descendleft (1299605,  692675) (129,   5) 27820ft FL280  988K H330
+
+
+Elapsed Time: 1218 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 706477, 1041340) ( 80,   3) 23120ft FL230  988K H 30
+   Descendleft (1294603,  701340) (128,   5) 27780ft FL280  988K H330
+
+
+Elapsed Time: 1224 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 711480, 1050005) ( 81,   3) 23160ft FL230  988K H 30
+   Descendleft (1289600,  710005) (128,   5) 27740ft FL275  988K H330
+
+
+Elapsed Time: 1230 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 716483, 1058670) ( 81,   3) 23200ft FL230  988K H 30
+   Descendleft (1284597,  718670) (128,   5) 27700ft FL275  988K H330
+
+
+Elapsed Time: 1236 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 721485, 1067335) ( 81,   3) 23240ft FL230  988K H 30
+   Descendleft (1279595,  727335) (127,   5) 27660ft FL275  988K H330
+
+
+Elapsed Time: 1242 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 726488, 1075999) ( 82,   3) 23280ft FL235  988K H 30
+   Descendleft (1274592,  735999) (127,   5) 27620ft FL275  988K H330
+
+
+Elapsed Time: 1248 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 731491, 1084664) ( 82,   3) 23320ft FL235  988K H 30
+   Descendleft (1269589,  744664) (126,   5) 27580ft FL275  988K H330
+
+
+Elapsed Time: 1254 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 736493, 1093329) ( 83,   3) 23360ft FL235  988K H 30
+   Descendleft (1264587,  753329) (126,   5) 27540ft FL275  988K H330
+
+
+Elapsed Time: 1260 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 743568, 1100404) ( 83,   3) 23400ft FL235  988K H 45
+   Descendleft (1257512,  760404) (125,   5) 27500ft FL275  988K H315
+
+
+Elapsed Time: 1266 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 750643, 1107479) ( 84,   3) 23440ft FL235  988K H 45
+   Descendleft (1250437,  767479) (125,   5) 27460ft FL275  988K H315
+
+
+Elapsed Time: 1272 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 757718, 1114554) ( 84,   3) 23480ft FL235  988K H 45
+   Descendleft (1243362,  774554) (124,   5) 27420ft FL275  988K H315
+
+
+Elapsed Time: 1278 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 764793, 1121629) ( 85,   3) 23520ft FL235  988K H 45
+   Descendleft (1236287,  781629) (124,   5) 27380ft FL275  988K H315
+
+
+Elapsed Time: 1284 Seconds.
+      Callsign (      x,       y) ( gx,  gy)   Alt   FL    Knots  Deg
+    ClimbRight ( 771868, 1128703) ( 85,   3) 23560ft FL235  988K H 45
+   Descendleft (1229212,  788703) (123,   5) 27340ft 

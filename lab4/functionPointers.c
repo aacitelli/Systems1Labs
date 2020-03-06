@@ -43,7 +43,7 @@ int outside_colorado(void *data) {
 /* Deallocates plane data (will be called if it's outside Colorado) */
 void dispose_plane(void *data) {
     Plane *plane = (Plane *) data;
-    fprintf(stderr, "DIAGNOSTIC: %s leaves the simulation.\n", plane->callsign);
+    fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s leaves the simulation.\n", plane->callsign);
     free(plane); 
 }
 
@@ -52,7 +52,7 @@ void print_plane(void *data) {
     Plane *plane = (Plane *) data;
     short xGrid = xToGrid(plane->x), yGrid = yToGrid(plane->y); 
     short flightLevel = getFlightLevelFromFeet(plane->altitude);
-    fprintf(stderr, "%14s (%7.0lf, %7.0lf) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->callsign, plane->x, plane->y, 
+    fprintf(plane->pointerToSim->textStream, "%14s (%7.0lf, %7.0lf) (%3hd, %3hd) %5dft FL%3hd %4hdK H%3hd\n", plane->callsign, plane->x, plane->y, 
         xToGrid(plane->x), yToGrid(plane->y), plane->altitude, flightLevel, lround(plane->airspeed / FEET_PER_KNOT), plane->heading);
 }
 
@@ -82,7 +82,7 @@ void pilot_plane(void *data) {
 /* Executes pilot code for flight profile zero */
 void pilot0(Plane *plane) {
     /* Do nothing, we boring */
-    fprintf(stderr, "DIAGNOSTIC: %s is flying straight and leveled off.\n", plane->callsign);
+    fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s is flying straight and leveled off.\n", plane->callsign);
 }
 
 /* Executes pilot code for flight profile one */
@@ -100,9 +100,9 @@ void pilot1HeadingChange(Plane *plane) {
         if (plane->heading < 0) {
             plane->heading = 360 + plane->heading;
         }
-        fprintf(stderr, "DIAGNOSTIC: %s is turning left and ", plane->callsign); 
+        fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s is turning left and ", plane->callsign); 
     } else {
-        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->callsign); 
+        fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s is flying straight and ", plane->callsign); 
     }
 }
 
@@ -110,9 +110,10 @@ void pilot1HeadingChange(Plane *plane) {
 void pilot1AltitudeChange(Plane *plane) {    
     if (plane->altitude > 19500) {
         plane->roc = -400; 
-        fprintf(stderr, "descending.\n"); 
+        fprintf(plane->pointerToSim->diagStream, "descending.\n"); 
     } else {
-        fprintf(stderr, "leveled off.\n");
+        plane->roc = 0; 
+        fprintf(plane->pointerToSim->diagStream, "leveled off.\n");
     }
 }
 
@@ -131,9 +132,9 @@ void pilot2HeadingChange(Plane *plane) {
         if (plane->heading > 360) {
             plane->heading = plane->heading % 360; 
         }
-        fprintf(stderr, "DIAGNOSTIC: %s is turning right and ", plane->callsign); 
+        fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s is turning right and ", plane->callsign); 
     } else {
-        fprintf(stderr, "DIAGNOSTIC: %s is flying straight and ", plane->callsign);
+        fprintf(plane->pointerToSim->diagStream, "DIAGNOSTIC: %s is flying straight and ", plane->callsign);
     }
 }
 
@@ -141,8 +142,9 @@ void pilot2HeadingChange(Plane *plane) {
 void pilot2AltitudeChange(Plane *plane) {    
     if (plane->altitude < 33500) {
         plane->roc = 400; 
-        fprintf(stderr, "climbing.\n");
+        fprintf(plane->pointerToSim->diagStream, "climbing.\n");
     } else {
-        fprintf(stderr, "leveled off.\n");
+        plane->roc = 0;
+        fprintf(plane->pointerToSim->diagStream, "leveled off.\n");
     }
 }

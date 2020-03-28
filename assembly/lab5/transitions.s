@@ -6,6 +6,7 @@
 # OR ONE OF OUR UNDERGRADUATE GRADERS.
 
 .file "transitions.s" 
+.text
 
 /* Register List: 
     %rax: Return Value (in our case this is the current sum of 0->1 shifts)
@@ -15,7 +16,9 @@
     %%rsi, %rdx: First, second, third parameters. We'll use them to hold values. 
     %
 */
-countBits: 
+
+.global transitions
+transitions: 
 
     # rbp = 64-bit Base Pointer
     # Save the calling function's base pointer so we can return to that offset (instead of the one we are about to create) at the end of this function 
@@ -27,8 +30,9 @@ countBits:
     # We start at zero 0->1 shifts, then start summing
     xorq %rax, %rax 
 
-    # Zero rsi b/c we're about to use it 
+    # Zero the two parameters we'll use to store the two relevant bits 
     xorq %rsi, %rsi 
+    xorq %rdx, %rdx 
 
     # If the number's already through, jump to done
 
@@ -36,9 +40,18 @@ loop:
 
     /* 
     # Do everything here!
+    % rsi: Used to hold our "current" value 
+    % rdi: Used to hold our "next" value 
+
+    % Grab first two bits before the loop actually starts 
+
+
     loop_start: 
 
-        # Grab the current bit 
+        # Move the next bit into the current bit 
+
+
+        # Grab the new next bit 
 
         # Grab the next bit 
 
@@ -49,6 +62,8 @@ loop:
 
 done: 
 
+    movq $5, %rax
+    
     # Move the stack pointer back to the beginning of this function 
     movq %rbp, %rsp 
 

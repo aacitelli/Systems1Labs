@@ -35,16 +35,26 @@
         - Each iteration, I can do a compare to the low number, then to the high number if it passes the low test
         - If it passes both tests, increment %rax
 */ 
-.global count
+.globl count
+
+/* Inputs: 
+    %rdi = Address of Structure 
+    %rsi = Lower Bound (Inclusive) 
+    %rdx = Upper Bound (Inclusive) 
+*/
 count: 
 
     # Save previous base pointer and set up new base pointer 
-    pushq %rbp
+    pushq %rbp  
     movq %rsp, %rbp 
 
     # Do everything right here
+    movq $5, %rax
 
     # Move back to the top of our stack frame and set our stack pointer back up 
     movq %rbp, %rsp 
     popq %rbp 
     ret
+
+    # Assembler directive that means "mark off this amount of space for this function"
+    .size count, .-count

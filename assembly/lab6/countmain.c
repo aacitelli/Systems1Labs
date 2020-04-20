@@ -12,9 +12,9 @@ long count( struct exp *ptr, long lower, long upper);
 int main()
 {
         struct exp example = { "at twenty characters",
-                {4, 4, 4, 4, 4, 4, 4, 4, 4, 4 },
-                8 };
-        long G = count(&example, 3, 5);
+                { 5, 2, 3, 4, 5, 6, 7, 5, 6, 6 },
+                6 };
+        long G = count(&example, 4, 7);
 
         printf("countmain: %ld found.\n", G);
 }

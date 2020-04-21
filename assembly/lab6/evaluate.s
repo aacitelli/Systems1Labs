@@ -26,67 +26,56 @@
 
 /* 
     Parameters: 
-    %rdi = Address of Structure 
+    %rdi = Address of Structure
     %rsi = Lower Bound (Inclusive) 
     %rdx = Upper Bound (Inclusive) 
     %rax (Return Value): Stores whatever count returns ezpz 
 
     Free Registers: 
     Fourth Through Sixth Parameters: 
-    %rcx (Fourth Parameter): 
-    %r8 (Fifth Parameter): 
-    %r9 (Sixth Parameter): Used Temporarily to Cache First Argument before each print() call 
+    %rcx (Fourth Parameter): Not passed-in, but we use this to pass in an argument to print 
+    %r8 (Fifth Parameter): As of yet unused
+    %r9 (Sixth Parameter): As of yet unused
 
     Other Caller-Saved Registers that I may need to use: 
-    %r10: Used Temporarily to Cache Second Argument before each print() call
-    %r11: Used Temporarily to Cache Third Argument before each print() call 
+    %r10: As of yet unused
+    %r11: As of yet unused
 
     Callee-Saved Registers Used (just means I have to push them at beginning and pop them at the end): 
 */
+
+# TODO: Figure out if my register usage is good here and that I can use caller-saved registers in what's not a leaf function (though I push and pop them beforehand, so I should be good)
 evaluate: 
 
-    # Save previous base pointer to stack and set up new base pointer 
+    # Save previous function's base pointer and update this one's to the bottom of the stack 
     pushq %rbp  
-    movq %rsp, %rbp 
-
-    # Move back to the top of our stack frame and set our stack pointer back up 
-    movq %rbp, %rsp 
-    popq %rbp 
-
-    # Saving all the caller-saved variables that we use in this function to the stack prior to our print call 
-    # We only need to save these three because these are the ones we need to pass into count(); We don't care what's in the rest of them. 
-    # And if they're needed in the function that called *this one*, they're caller saved, so we're not responsible for that. 
-    pushq %rdi
-    pushq %rsi 
-    pushq %rdx
-
-    # We have to essentially shift the argument list one down for our call to printf; More organized to use other registers to temporarily hold those values 
-    # so we don't have to worry about the assignent to one argument overwriting something we need for the next one, as seen below
-    # Note: push/pop do not overwrite the values themselves, just throws them on the stack, so we can still read from them here after we do a push 
-    movq %rdi, %r9 # Move address of struct to %r9 
-    movq %rsi, %r10 # Move lower bound to %r10 
-    movq %rdx, %r11 # Move upper bound to %r11 
+    movq %rsp, %rbp
 
     # Fill print()'s parameter list before we call it 
-    # This one follows the format printf("evaluate: Evaluating '%s' looking for results between %ld and %ld.\n", StringFromStructure, LowerBound, UpperBound)
-    # (though, we're using print() which has the same signature as printf, and those arguments are just symbolic names that correspond to the registers below) 
-    movq $.LC0, %rdi # First argument is the print-formatted string 
-    movq %r9, %rsi # Second argument is the actual string from the struct 
-    movq %r10, %rdx # Third argument is the lower bound
-    movq %r11, %rcx # Fourth argument is the upper bound 
+    # We have to shift arguments around b/c the call structure for print is a little different than what was passed into this function (1 new, 1->2, 2->3, 3->4)
+    # We have to essentially fill our arguments backwards because otherwise we overwrite stuff
+    movq %rdx, %rcx # Fourth argument is the upper bound, which is our original third argument
+    movq %rsi, %rdx # Third argument is the lower bound, which is our original second argument
+    movq %rdi, %rsi # Second argument is the actual string from the struct, which is the same address as the struct itself 
+    movq $.LC0, %rdi # First argument is the print-formatted string, which we can just copy from read-only memory 
 
-break: 
+    # Our parameters, being caller-saved parameters, have no guarantee that they will be the same after a call to print(). 
+    # So, we push these onto the stack before our call (and will pop them back off afterwards). 
+    pushq %rsi # Push the pointer to the struct onto the stack 
+    pushq %rdx # Push the lower bound onto the stack 
+    pushq %rcx # Push the upper bound onto the stack 
+    xorq %rax, %rax # Need to zero out the return value before calls 
 
     # Calling print for the first time 
     call print 
 
     # Popping our three parameters back off of the stack (in reverse order b/c stack is LIFO)
-    popq %rdx 
-    popq %rsi 
-    popq %rdi 
+    # Popping back into the registers that they need to be for the count call, NOT what we pushed them as 
+    popq %rdx # We pushed the upper bound as rcx (4th param), we pop it into rdx (3rd param)
+    popq %rsi # We pushed the lower bound as rdx (3rd param), we pop it into rsi (2nd param)
+    popq %rdi # We pushed the address of our struct as rsi (2nd param), we pop it into rdi (1st param) 
 
-    # Have to preserve the values of these regardless across every function call, even count()
-    # (although I know count doesn't screw them up because I wrote it, it's convention) 
+    # Pushing our parameters back onto the stack (as is our duty by using caller-saved registers)
     pushq %rdi 
     pushq %rsi 
     pushq %rdx 
@@ -96,39 +85,31 @@ break:
     # This fills %rax with the correct value, we don't need to do something like %rax = count() because we're too cool for C
     call count
 
-    # Popping our three parameters back off the stack 
+    # Popping our three parameters back off the stack, restoring their values regardless of what happened inside count()  
     popq %rdx 
     popq %rsi 
     popq %rdi 
-
-    # Saving all the caller-saved variables that we use in this function to the stack prior to our print call 
-    # I don't think this is *technically* necessary seeing as we don't need to use them after this call, but it's 
-    # more maintainable, structured, and readable this way 
-    pushq %rdi 
-    pushq %rsi 
-    pushq %rdx 
-
-    # Again, similarly to above, if we just write our three arguments to their correct arguments to the print call, we end up overwriting stuff. 
-    # So, here, I'm caching those values in other (caller-saved) registers. 
-    movq %rdi, %r9 # Move address of struct to %r9 
-    movq %rsi, %r10 # Move lower bound to %r10 
-    movq %rdx, %r11 # Move upper bound to %r11 
-
+    
     # Fill print()'s parameters list before we call it 
-    # This call is in order "evaluate: Found %ld results between %ld and %ld\n"
-    movq $.LC1, %rdi # Move formatted string into first argument 
-    movq %rax, %rsi # Move return value from count into our second argument 
-    movq %r10, %rdx # Move our lower bound into our third argument
-    movq %r11, %rcx # Move our upper bound into our fourth argument 
+    # Essentially the same as the first print() call, but the second argument is now the return argument instead of struct name or w/e 
+    movq %rdx, %rcx # Fourth argument is the upper bound, which is our original third argument
+    movq %rsi, %rdx # Third argument is the lower bound, which is our original second argument
+    movq %rax, %rsi # Second argument is the RETURN VALUE that count returned
+    movq $.LC1, %rdi # First argument is the print-formatted string, which we can just copy from read-only memory 
+
+    # We need to save whatever count() put in rax() through this call! 
+    pushq %rax 
+
+    # rax needs zeroed out before function calls
+    xorq %rax, %rax 
+
+    # Note: No need to preserve our argument values (i.e. push/pop them); We don't need them after this call, so we don't care if we still have access to the values afterward 
 
     # Calling print for the second time 
     call print 
 
-    # Popping these back off the stack to save stack space
-    # (We don't actually use them again, and we don't need to preserve them for the calling function or anything, but we don't want to keep accruing stack space) 
-    popq %rdx 
-    popq %rsi 
-    popq %rdi 
+    # Restoring the push we did right beforehand
+    pop %rax 
 
     # Restore stack frame of function this function was callee of 
     movq %rbp, %rsp 

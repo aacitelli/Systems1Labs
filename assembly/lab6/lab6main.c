@@ -29,7 +29,6 @@ main()
         long lower = 3, upper = 5;
         long cnt = sizeof(structs) / sizeof(structs[0]) -1;
 
-
         lower = 3;
         upper = 5;
         ptr = search(structs, cnt, lower, upper);

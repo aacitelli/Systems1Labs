@@ -31,92 +31,73 @@
     %rdx = Upper Bound (Inclusive) 
     %rax (Return Value): Stores whatever count returns ezpz 
 
-    Free Registers: 
-    Fourth Through Sixth Parameters: 
-    %rcx (Fourth Parameter): Not passed-in, but we use this to pass in an argument to print 
-    %r8 (Fifth Parameter): As of yet unused
-    %r9 (Sixth Parameter): As of yet unused
-
-    Other Caller-Saved Registers that I may need to use: 
-    %r10: As of yet unused
-    %r11: As of yet unused
-
-    Callee-Saved Registers Used (just means I have to push them at beginning and pop them at the end): 
+    Callee-Saved Registers: 
+    %rbx = Caches First Argument (Address of Struct)
+    %r12 = Caches Second Argument (Lower Bound) 
+    %r13 = Caches Third Argument (Upper Bound)
+    %r14 = Caches Count Return Value
+    %r15 = Unused 
 */
 
-# TODO: Figure out if my register usage is good here and that I can use caller-saved registers in what's not a leaf function (though I push and pop them beforehand, so I should be good)
 evaluate: 
 
     # Save previous function's base pointer and update this one's to the bottom of the stack 
     pushq %rbp  
     movq %rsp, %rbp
 
-    # Fill print()'s parameter list before we call it 
-    # We have to shift arguments around b/c the call structure for print is a little different than what was passed into this function (1 new, 1->2, 2->3, 3->4)
-    # We have to essentially fill our arguments backwards because otherwise we overwrite stuff
-    movq %rdx, %rcx # Fourth argument is the upper bound, which is our original third argument
-    movq %rsi, %rdx # Third argument is the lower bound, which is our original second argument
-    movq %rdi, %rsi # Second argument is the actual string from the struct, which is the same address as the struct itself 
-    movq $.LC0, %rdi # First argument is the print-formatted string, which we can just copy from read-only memory 
+    # Pushing all the callee-saved registers that we use (it's our responsibility as a callee to do so)
+    pushq %rbx 
+    pushq %r12 
+    pushq %r13 
+    pushq %r14 
 
-    # Our parameters, being caller-saved parameters, have no guarantee that they will be the same after a call to print(). 
-    # So, we push these onto the stack before our call (and will pop them back off afterwards). 
-    pushq %rsi # Push the pointer to the struct onto the stack 
-    pushq %rdx # Push the lower bound onto the stack 
-    pushq %rcx # Push the upper bound onto the stack 
-    xorq %rax, %rax # Need to zero out the return value before calls 
+    # We need to save these past the first print call, so we shove them in callee saved registers. 
+    # It's valid to use caller-saved registers here as well (and I did, before I read that we'd get points off for that, but it was good experience), but that 
+    # introduces a lot of overhead insofar as needing to push/pop each one around the function calls. Callee saved registers are *way* cleaner here. 
+    movq %rdi, %rbx # Move address of struct into rbx 
+    movq %rsi, %r12 # Move lower bound into r12 
+    movq %rdx, %r13 # Move upper bound into r13 
 
-    # Calling print for the first time 
-    call print 
+    # Setting up print() function parameters and call it 
+    movq $.LC0, %rdi # First parameter is the format string, defined above
+    movq %rbx, %rsi # Second parameter is our struct string, which conveniently starts at the same memory address as the overall struct
+    movq %r12, %rdx # Third parameter is the lower bound 
+    movq %r13, %rcx # Fourth parameter is the upper bound 
+    xorq %rax, %rax # Zero out the return value before calls 
+    call print # Actually transfer control to print() 
 
-    # Popping our three parameters back off of the stack (in reverse order b/c stack is LIFO)
-    # Popping back into the registers that they need to be for the count call, NOT what we pushed them as 
-    popq %rdx # We pushed the upper bound as rcx (4th param), we pop it into rdx (3rd param)
-    popq %rsi # We pushed the lower bound as rdx (3rd param), we pop it into rsi (2nd param)
-    popq %rdi # We pushed the address of our struct as rsi (2nd param), we pop it into rdi (1st param) 
+    # Setting up count() function parameters and call it 
+    movq %rbx, %rdi # First parameter is the overall address of the struct 
+    movq %r12, %rsi # Second parameter is the lower bound 
+    movq %r13, %rdx # Third parameter is the upper bound 
+    xorq %rax, %rax # Zero out return value before calls 
+    call count # Actually transfer control to count()
 
-    # Pushing our parameters back onto the stack (as is our duty by using caller-saved registers)
-    pushq %rdi 
-    pushq %rsi 
-    pushq %rdx 
+    # We need to save %rax through the next call. 
+    # We can't use any of the three callee-saved registers we already use, as we need to save their values to restore at the end of the function. So, we use a new one. 
+    movq %rax, %r14 
 
-    # Calling count() 
-    # count() has the same parameter set, so we don't need to move around our three parameter arguments at all 
-    # This fills %rax with the correct value, we don't need to do something like %rax = count() because we're too cool for C
-    call count
+    # Setting up print() function parameters (printing out a slightly different string this time, so we switch the third parameter relative to the first print() call) 
+    movq $.LC1, %rdi # First argument is the format string
+    movq %rax, %rsi # Second argument is the actual return value of count (can either use %rax or %r14 here, doesn't matter) 
+    movq %r12, %rdx # Third parameter is the lower bound 
+    movq %r13, %rcx # Fourth parameter is the upper bound 
+    xorq %rax, %rax # Zero out the return value before calls 
+    call print # Actually transfer control to print()
 
-    # Popping our three parameters back off the stack, restoring their values regardless of what happened inside count()  
-    popq %rdx 
-    popq %rsi 
-    popq %rdi 
-    
-    # Fill print()'s parameters list before we call it 
-    # Essentially the same as the first print() call, but the second argument is now the return argument instead of struct name or w/e 
-    movq %rdx, %rcx # Fourth argument is the upper bound, which is our original third argument
-    movq %rsi, %rdx # Third argument is the lower bound, which is our original second argument
-    movq %rax, %rsi # Second argument is the RETURN VALUE that count returned
-    movq $.LC1, %rdi # First argument is the print-formatted string, which we can just copy from read-only memory 
+    # Move our value of %rax obtained from count() back into %rax, seeing as print overwrote it 
+    movq %r14, %rax 
 
-    # We need to save whatever count() put in rax() through this call! 
-    pushq %rax 
-
-    # rax needs zeroed out before function calls
-    xorq %rax, %rax 
-
-    # Note: No need to preserve our argument values (i.e. push/pop them); We don't need them after this call, so we don't care if we still have access to the values afterward 
-
-    # Calling print for the second time 
-    call print 
-
-    # Restoring the push we did right beforehand
-    pop %rax 
+    # Restoring callee-saved registers that we use (backwards relative to original push order b/c stack is LIFO, not FIFO)
+    popq %r14 
+    popq %r13 
+    popq %r12 
+    popq %rbx 
 
     # Restore stack frame of function this function was callee of 
     movq %rbp, %rsp 
     popq %rbp 
-
-    # Transfer control back to caller function 
-    ret
+    ret # Transfer control back to caller function 
 
     # Assembler directive that essentially means "mark off this amount of space for this function"
     .size evaluate, .-evaluate

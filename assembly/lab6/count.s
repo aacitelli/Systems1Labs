@@ -1,5 +1,5 @@
 # Name: Anden Acitelli
-# Assignment: Lab 5
+# Assignment: Lab 6
 # File: count.s
 # BY SUBMITTING THIS FILE AS PART OF MY LAB ASSIGNMENT, I CERTIFY THAT 
 # ALL OF THE CODE FOUND WITHIN THIS FILE WAS CREATED BY ME WITH NO

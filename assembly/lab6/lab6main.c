@@ -31,14 +31,15 @@ main()
 
         lower = 3;
         upper = 5;
+
         ptr = search(structs, cnt, lower, upper);
-printf("Lab6: '%s' has the most between %ld and %ld\n\n", ptr->name, lower, upper);
+
+        printf("Lab6: '%s' has the most between %ld and %ld\n\n", ptr->name, lower, upper);
 
         lower = -2;
         upper = 2;
         ptr = search(structs, cnt, lower, upper);
-printf("Lab6: '%s' has the most between %ld and %ld\n\n", ptr->name, lower, upper);
-
+        printf("Lab6: '%s' has the most between %ld and %ld\n\n", ptr->name, lower, upper);
 }
 
 

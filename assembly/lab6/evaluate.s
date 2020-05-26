@@ -1,5 +1,5 @@
 # Name: Anden Acitelli
-# Assignment: Lab 5
+# Assignment: Lab 6
 # File: evaluate.s
 # BY SUBMITTING THIS FILE AS PART OF MY LAB ASSIGNMENT, I CERTIFY THAT 
 # ALL OF THE CODE FOUND WITHIN THIS FILE WAS CREATED BY ME WITH NO
@@ -63,26 +63,26 @@ evaluate:
     movq %rbx, %rsi # Second parameter is our struct string, which conveniently starts at the same memory address as the overall struct
     movq %r12, %rdx # Third parameter is the lower bound 
     movq %r13, %rcx # Fourth parameter is the upper bound 
-    xorq %rax, %rax # Zero out the return value before calls 
+    xorq %rax, %rax # Zero out the return value before print calls 
     call print # Actually transfer control to print() 
 
     # Setting up count() function parameters and call it 
     movq %rbx, %rdi # First parameter is the overall address of the struct 
     movq %r12, %rsi # Second parameter is the lower bound 
     movq %r13, %rdx # Third parameter is the upper bound 
-    xorq %rax, %rax # Zero out return value before calls 
+
     call count # Actually transfer control to count()
 
     # We need to save %rax through the next call. 
     # We can't use any of the three callee-saved registers we already use, as we need to save their values to restore at the end of the function. So, we use a new one. 
-    movq %rax, %r14 
+    movq %rax, %r14
 
     # Setting up print() function parameters (printing out a slightly different string this time, so we switch the third parameter relative to the first print() call) 
     movq $.LC1, %rdi # First argument is the format string
     movq %rax, %rsi # Second argument is the actual return value of count (can either use %rax or %r14 here, doesn't matter) 
     movq %r12, %rdx # Third parameter is the lower bound 
     movq %r13, %rcx # Fourth parameter is the upper bound 
-    xorq %rax, %rax # Zero out the return value before calls 
+    xorq %rax, %rax # Zero out the return value before print calls 
     call print # Actually transfer control to print()
 
     # Move our value of %rax obtained from count() back into %rax, seeing as print overwrote it 

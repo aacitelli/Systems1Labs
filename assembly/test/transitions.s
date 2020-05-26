@@ -98,5 +98,3 @@ done:
 
     # Transfers execution back to the calling function 
     ret
-
-    .size transitions, .-transitions
